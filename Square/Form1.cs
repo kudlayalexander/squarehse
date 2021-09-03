@@ -23,7 +23,7 @@ namespace Square
 
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) // выбор типа
         {
 
         }
@@ -31,6 +31,21 @@ namespace Square
         private void button4_Click(object sender, EventArgs e) //  цифра 1
         {
             MessageBox.Show("hello");
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
