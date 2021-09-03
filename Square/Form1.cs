@@ -27,5 +27,10 @@ namespace Square
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e) //  цифра 1
+        {
+            MessageBox.Show("hello");
+        }
     }
 }
