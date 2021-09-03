@@ -18,7 +18,7 @@ namespace Square
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // О программе
         {
 
         }
@@ -30,7 +30,7 @@ namespace Square
 
         private void button4_Click(object sender, EventArgs e) //  цифра 1
         {
-            MessageBox.Show("hello");
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -38,14 +38,23 @@ namespace Square
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
-
+            Button C = (Button)sender;
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = C.Text;
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + C.Text;
+            }
+            
         }
     }
 }

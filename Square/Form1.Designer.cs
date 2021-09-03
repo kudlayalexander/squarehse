@@ -92,7 +92,7 @@ namespace Square
             this.button4.TabIndex = 5;
             this.button4.Text = "1";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button14_Click);
             // 
             // button5
             // 
@@ -102,6 +102,7 @@ namespace Square
             this.button5.TabIndex = 6;
             this.button5.Text = "2";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button14_Click);
             // 
             // button6
             // 
@@ -111,6 +112,7 @@ namespace Square
             this.button6.TabIndex = 7;
             this.button6.Text = "3";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button14_Click);
             // 
             // button7
             // 
@@ -120,6 +122,7 @@ namespace Square
             this.button7.TabIndex = 8;
             this.button7.Text = "4";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button14_Click);
             // 
             // button8
             // 
@@ -129,6 +132,7 @@ namespace Square
             this.button8.TabIndex = 9;
             this.button8.Text = "5";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button14_Click);
             // 
             // button9
             // 
@@ -138,6 +142,7 @@ namespace Square
             this.button9.TabIndex = 10;
             this.button9.Text = "6";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button14_Click);
             // 
             // button10
             // 
@@ -147,6 +152,7 @@ namespace Square
             this.button10.TabIndex = 11;
             this.button10.Text = "7";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button14_Click);
             // 
             // button11
             // 
@@ -156,6 +162,7 @@ namespace Square
             this.button11.TabIndex = 12;
             this.button11.Text = "8";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button14_Click);
             // 
             // button12
             // 
@@ -165,6 +172,7 @@ namespace Square
             this.button12.TabIndex = 13;
             this.button12.Text = "9";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -184,6 +192,7 @@ namespace Square
             this.button14.TabIndex = 15;
             this.button14.Text = "0";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -238,6 +247,7 @@ namespace Square
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(318, 45);
             this.textBox1.TabIndex = 22;
+            this.textBox1.Text = "0";
             // 
             // groupBox1
             // 
