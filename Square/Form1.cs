@@ -33,7 +33,8 @@ namespace Square
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) // счетчик точности
         {
             value = (double)numericUpDown1.Value;
-            counter.count = value;
+            sqrt.iter = value;
+
         }
         
 
@@ -68,9 +69,12 @@ namespace Square
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
-            counter.number = double.Parse(textBox1.Text);
-            sqrt.doubleSqrt = sqrt.GetDoubleSqrt(counter.number);
+            sqrt.number = double.Parse(textBox1.Text);
+            sqrt.doubleSqrt = sqrt.GetDoubleSqrt();
+            sqrt.analSqrt = sqrt.GetAnalSqrt();
             textBox1.Text = $"{sqrt.doubleSqrt}";
+            //textBox1.Text = $"{sqrt.analSqrt}";
+
 
         }
 
