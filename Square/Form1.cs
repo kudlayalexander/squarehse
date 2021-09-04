@@ -15,7 +15,6 @@ namespace Square
     public partial class Form1 : Form
     {
         public double value { get; set; }
-        Counter counter = new Counter();
         Sqrt sqrt = new Sqrt();
 
         public Form1()
@@ -81,7 +80,7 @@ namespace Square
 
         private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
         {
-            MessageBox.Show($"{counter.count}");
+            MessageBox.Show($"{sqrt.iter}");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
