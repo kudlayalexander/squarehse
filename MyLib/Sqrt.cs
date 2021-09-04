@@ -9,6 +9,7 @@ namespace MyLib
 {
     public class Sqrt
     {
+        public bool positive { get; set; }
         public double doubleSqrt { get; set; } // поле с результатом после обычного вычисления корня
 
         public double analSqrt { get; set; } // поле с результатом после аналитического вычисления
@@ -20,6 +21,7 @@ namespace MyLib
         public Sqrt (double number=0) // конструктор, который при создании экземпляра класса Sqrt  присвоит полю number нужное нам число
         {
             this.number = number;
+            positive = true;
         }
 
         public double GetDoubleSqrt() // метод, вычисляет обычный корень
