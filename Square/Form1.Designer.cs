@@ -268,6 +268,7 @@ namespace Square
             this.button20.TabIndex = 24;
             this.button20.Text = "Точность вывода";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button22
             // 

@@ -14,11 +14,14 @@ namespace Square
 {
     public partial class Form1 : Form
     {
+        public double value { get; set; }
+        Counter counter = new Counter();
         public Form1()
         {
             InitializeComponent();
-            
+
         }
+
 
         private void button1_Click(object sender, EventArgs e) // О программе
         {
@@ -27,7 +30,8 @@ namespace Square
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) // счетчик точности
         {
-            double count = 
+            value = (double)numericUpDown1.Value;
+            counter.count = value;
         }
         
 
@@ -63,6 +67,11 @@ namespace Square
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
             double number = double.Parse(textBox1.Text);
+        }
+
+        private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
+        {
+            MessageBox.Show($"{counter.count}");
         }
     }
 }
