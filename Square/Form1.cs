@@ -44,6 +44,7 @@ namespace Square
 
         private void groupBox1_Enter(object sender, EventArgs e) // выбор типа
         {
+            Controls.Add(button1);
 
         }
 
@@ -82,6 +83,22 @@ namespace Square
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) // Реальные
+        {
+            if (radioButton2.Checked)
+            {
+                MessageBox.Show("Вы выбрали " + radioButton2.Text);
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) //Комплексные
+        {
+            if (radioButton1.Checked)
+            {
+                MessageBox.Show("Вы выбрали " + radioButton1.Text);
+            }
         }
     }
 }
