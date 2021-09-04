@@ -9,44 +9,31 @@ namespace MyLib
 {
     public class Sqrt
     {
-        public double doubleSqrt { get; set; }
+        public double doubleSqrt { get; set; } // поле с результатом после обычного вычисления корня
 
-        public double analSqrt { get; set; }
+        public double analSqrt { get; set; } // поле с результатом после аналитического вычисления
 
-        public double number { get; set; }
+        public double number { get; set; } // поле с числом, их которого будем брать корень
 
-        public double iter { get; set; }
+        public double iter { get; set; } // точность
 
-        public Sqrt (double number=0)
+        public Sqrt (double number=0) // конструктор, который при создании экземпляра класса Sqrt  присвоит полю number нужное нам число
         {
             this.number = number;
         }
 
-        public double GetDoubleSqrt()
+        public double GetDoubleSqrt() // метод, вычисляет обычный корень
         {
             double result =  Math.Sqrt(number);
             return Math.Round(result, (int)iter);
         }
 
-        /*
-        a = float(input())
-        def x(n, a):
-            return (1/2)*(n+a/n)
-        sqrt = 0
-        n = 1
-        e = 0.000000000000001
-        while abs(x(n, a)-n) > e:
-            sqrt = x(n, a)
-            n = sqrt
-        print(sqrt)
-        */
-
-        public double AnalFunc(double n, double a)
+        public double AnalFunc(double n, double a) // метод который нужен в методе GetAnalSqrt
         {
             return (double)(1 / 2) * (n + (double)(a / n));
         }
 
-        public double GetAnalSqrt()
+        public double GetAnalSqrt() // возвращает значение анал корня
         {
             double n = 1;
             double result = 0;

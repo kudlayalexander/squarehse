@@ -14,13 +14,12 @@ namespace Square
 {
     public partial class Form1 : Form
     {
-        public double value { get; set; }
-        Sqrt sqrt = new Sqrt();
+        public double value { get; set; } // создание поля которое может хранить значение
+        Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
         public Form1()
         {
             InitializeComponent();
-
         }
 
 
@@ -31,8 +30,8 @@ namespace Square
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) // счетчик точности
         {
-            value = (double)numericUpDown1.Value;
-            sqrt.iter = value;
+            value = (double)numericUpDown1.Value;// в поле value присвоится значение из счетчика
+            sqrt.iter = value; // в поле итер записываем значение точности
 
         }
         
@@ -55,7 +54,7 @@ namespace Square
 
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
-            Button buttonNumber = (Button)sender; // почему C ?
+            Button buttonNumber = (Button)sender; 
             if (textBox1.Text == "0")
             {
                 textBox1.Text = buttonNumber.Text;
@@ -69,10 +68,10 @@ namespace Square
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
-            sqrt.number = double.Parse(textBox1.Text);
-            sqrt.doubleSqrt = sqrt.GetDoubleSqrt();
-            sqrt.analSqrt = sqrt.GetAnalSqrt();
-            textBox1.Text = $"{sqrt.doubleSqrt}";
+            sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+            sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+            sqrt.analSqrt = sqrt.GetAnalSqrt();// аналогично
+            textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
             //textBox1.Text = $"{sqrt.analSqrt}";
 
             button13.Enabled = true; // включает запятую
