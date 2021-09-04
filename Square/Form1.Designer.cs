@@ -58,6 +58,9 @@ namespace Square
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,7 +79,7 @@ namespace Square
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.numericUpDown1.Location = new System.Drawing.Point(464, 9);
+            this.numericUpDown1.Location = new System.Drawing.Point(265, 9);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             15,
             0,
@@ -90,7 +93,7 @@ namespace Square
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button4.Location = new System.Drawing.Point(221, 157);
+            this.button4.Location = new System.Drawing.Point(22, 149);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 75);
             this.button4.TabIndex = 5;
@@ -101,7 +104,7 @@ namespace Square
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button5.Location = new System.Drawing.Point(302, 157);
+            this.button5.Location = new System.Drawing.Point(103, 149);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 75);
             this.button5.TabIndex = 6;
@@ -112,7 +115,7 @@ namespace Square
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button6.Location = new System.Drawing.Point(383, 157);
+            this.button6.Location = new System.Drawing.Point(184, 149);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 75);
             this.button6.TabIndex = 7;
@@ -123,7 +126,7 @@ namespace Square
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button7.Location = new System.Drawing.Point(221, 238);
+            this.button7.Location = new System.Drawing.Point(22, 230);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 75);
             this.button7.TabIndex = 8;
@@ -134,7 +137,7 @@ namespace Square
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button8.Location = new System.Drawing.Point(302, 238);
+            this.button8.Location = new System.Drawing.Point(103, 230);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 75);
             this.button8.TabIndex = 9;
@@ -145,7 +148,7 @@ namespace Square
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button9.Location = new System.Drawing.Point(383, 238);
+            this.button9.Location = new System.Drawing.Point(184, 230);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 75);
             this.button9.TabIndex = 10;
@@ -156,7 +159,7 @@ namespace Square
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button10.Location = new System.Drawing.Point(221, 319);
+            this.button10.Location = new System.Drawing.Point(22, 311);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 75);
             this.button10.TabIndex = 11;
@@ -167,7 +170,7 @@ namespace Square
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button11.Location = new System.Drawing.Point(302, 319);
+            this.button11.Location = new System.Drawing.Point(103, 311);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 75);
             this.button11.TabIndex = 12;
@@ -178,7 +181,7 @@ namespace Square
             // button12
             // 
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button12.Location = new System.Drawing.Point(383, 319);
+            this.button12.Location = new System.Drawing.Point(184, 311);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 75);
             this.button12.TabIndex = 13;
@@ -189,7 +192,7 @@ namespace Square
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button13.Location = new System.Drawing.Point(221, 400);
+            this.button13.Location = new System.Drawing.Point(22, 392);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 75);
             this.button13.TabIndex = 14;
@@ -200,7 +203,7 @@ namespace Square
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button14.Location = new System.Drawing.Point(302, 400);
+            this.button14.Location = new System.Drawing.Point(103, 392);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(75, 75);
             this.button14.TabIndex = 15;
@@ -212,7 +215,7 @@ namespace Square
             // 
             this.button15.Enabled = false;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button15.Location = new System.Drawing.Point(464, 238);
+            this.button15.Location = new System.Drawing.Point(265, 230);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 75);
             this.button15.TabIndex = 16;
@@ -223,7 +226,7 @@ namespace Square
             // 
             this.button16.Enabled = false;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button16.Location = new System.Drawing.Point(464, 319);
+            this.button16.Location = new System.Drawing.Point(265, 311);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(75, 75);
             this.button16.TabIndex = 17;
@@ -235,7 +238,7 @@ namespace Square
             this.button18.BackColor = System.Drawing.Color.Transparent;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button18.Location = new System.Drawing.Point(383, 400);
+            this.button18.Location = new System.Drawing.Point(184, 392);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(156, 75);
             this.button18.TabIndex = 19;
@@ -247,7 +250,7 @@ namespace Square
             // 
             this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button19.ForeColor = System.Drawing.Color.Red;
-            this.button19.Location = new System.Drawing.Point(464, 157);
+            this.button19.Location = new System.Drawing.Point(265, 149);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(75, 75);
             this.button19.TabIndex = 20;
@@ -258,7 +261,7 @@ namespace Square
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(221, 84);
+            this.textBox1.Location = new System.Drawing.Point(22, 98);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(365, 45);
@@ -270,7 +273,7 @@ namespace Square
             // 
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(607, 25);
+            this.groupBox1.Location = new System.Drawing.Point(417, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(165, 67);
             this.groupBox1.TabIndex = 23;
@@ -282,7 +285,7 @@ namespace Square
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 17);
+            this.radioButton2.Location = new System.Drawing.Point(7, 19);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(76, 17);
             this.radioButton2.TabIndex = 1;
@@ -294,7 +297,7 @@ namespace Square
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 40);
+            this.radioButton1.Location = new System.Drawing.Point(7, 42);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(96, 17);
             this.radioButton1.TabIndex = 0;
@@ -325,9 +328,9 @@ namespace Square
             // 
             this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Location = new System.Drawing.Point(607, 157);
+            this.groupBox2.Location = new System.Drawing.Point(607, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(165, 75);
+            this.groupBox2.Size = new System.Drawing.Size(165, 67);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Способ извлечения корня";
@@ -365,7 +368,7 @@ namespace Square
             "Hindi (हिन्दी )",
             "Russian (Русский)",
             "Spanish (Español)"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 35);
+            this.comboBox1.Location = new System.Drawing.Point(152, 523);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 21);
             this.comboBox1.TabIndex = 30;
@@ -376,7 +379,7 @@ namespace Square
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(149, 497);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 18);
             this.label1.TabIndex = 31;
@@ -386,17 +389,51 @@ namespace Square
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(215, 9);
+            this.label2.Location = new System.Drawing.Point(16, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 31);
             this.label2.TabIndex = 32;
             this.label2.Text = "Точность вывода";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.textBox2.Location = new System.Drawing.Point(22, 98);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 45);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.Text = "0";
+            this.textBox2.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.textBox3.Location = new System.Drawing.Point(221, 98);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(156, 45);
+            this.textBox3.TabIndex = 34;
+            this.textBox3.Text = "0";
+            this.textBox3.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label3.Location = new System.Drawing.Point(184, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 39);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "+";
+            this.label3.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -422,6 +459,7 @@ namespace Square
             this.Controls.Add(this.button4);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Извлекатель";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -464,6 +502,9 @@ namespace Square
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
     }
 }
 

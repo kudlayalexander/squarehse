@@ -100,9 +100,10 @@ namespace Square
             if (radioButton2.Checked)
             {
                 // отключение кнопок при нажатии на реал.числа
-                button15.Enabled = false;
-                button16.Enabled = false;
-                button17.Enabled = false;
+                textBox1.Visible = true;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                label3.Visible = false;
             }
         }
 
@@ -111,9 +112,10 @@ namespace Square
             if (radioButton1.Checked)
             {
                 // включение кнопок при нажатии на компл.числа
-                button15.Enabled = true;   
-                button16.Enabled = true;
-                button17.Enabled = true;
+                textBox1.Visible = false;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                label3.Visible = true;
             }
         }
 
