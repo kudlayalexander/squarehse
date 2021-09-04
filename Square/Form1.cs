@@ -75,6 +75,8 @@ namespace Square
             textBox1.Text = $"{sqrt.doubleSqrt}";
             //textBox1.Text = $"{sqrt.analSqrt}";
 
+            button13.Enabled = true; // включает запятую
+
 
         }
 
@@ -113,16 +115,27 @@ namespace Square
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
             textBox1.Text = "0";
+            button13.Enabled = true; // включает запятую
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способ извл. корня:  Обычный
         {
 
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
         {
 
+        }
+
+        private void button13_Click(object sender, EventArgs e) // Ввод запятой
+        {
+            Button buttonComma = (Button)sender;
+            if (textBox1.Text.Count(x => x == ',') == 0)
+            {
+                textBox1.Text = textBox1.Text + buttonComma.Text;
+                button13.Enabled = false;
+            }
         }
     }
 }
