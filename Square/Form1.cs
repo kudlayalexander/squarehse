@@ -80,6 +80,8 @@ namespace Square
                     sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
                     textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
                     sqrt.positive = true;
+                    button18.Enabled = false;
+                    button15.Enabled = false;
                 }
             }
             if (analit)
@@ -88,29 +90,23 @@ namespace Square
                 {
                     sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
 
-                    sqrt.analSqrt = sqrt.GetAnalSqrt();
-                    textBox1.Text = $"{sqrt.analSqrt}";
+                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                    textBox1.Text = $"{sqrt.analitSqrt}";
                 }
                 else
                 {
                     sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
-                    sqrt.analSqrt = sqrt.GetAnalSqrt();
-                    textBox1.Text = $"±{sqrt.analSqrt}i";
+                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                    textBox1.Text = $"±{sqrt.analitSqrt}i";
                     sqrt.positive = true;
-
+                    button18.Enabled = false;
+                    button15.Enabled = false;
                 }
             }
 
-
             button13.Enabled = true; // включает запятую
-
-
         }
 
-        private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
-        {
-            MessageBox.Show($"{sqrt.iter}");
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -145,6 +141,10 @@ namespace Square
         {
             textBox1.Text = "0";
             button13.Enabled = true; // включает запятую
+            button18.Enabled = true;
+            button15.Enabled = true;
+
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
@@ -200,6 +200,21 @@ namespace Square
             }
 
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
