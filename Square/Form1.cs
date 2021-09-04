@@ -107,9 +107,6 @@ namespace Square
             button13.Enabled = true; // включает запятую
         }
 
-
-
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -201,8 +198,7 @@ namespace Square
                 }
             }
 
-            
-        }
 
+        }
     }
 }
