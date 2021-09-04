@@ -51,16 +51,14 @@ namespace Square
 
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
-            Button buttonNumber = (Button)sender; 
-            if (textBox1.Text == "0")
+            Button buttonNumber = (Button)sender;
+            if (radioButton2.Checked)
             {
-                textBox1.Text = buttonNumber.Text;
+                if (textBox1.Text == "0")
+                    textBox1.Text = buttonNumber.Text;
+                else
+                    textBox1.Text = textBox1.Text + buttonNumber.Text;
             }
-            else
-            {
-                textBox1.Text = textBox1.Text + buttonNumber.Text;
-            }
-            
         }
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
@@ -107,17 +105,12 @@ namespace Square
 
         }
 
-        private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
-        {
-            MessageBox.Show($"{sqrt.iter}");
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e) // Реальные
+        private void radioButton2_CheckedChanged(object sender, EventArgs e) // Реальные числа, переключатель
         {
             if (radioButton2.Checked)
             {
@@ -129,7 +122,7 @@ namespace Square
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e) //Комплексные
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) // Комплексные числа, переключатель
         {
             if (radioButton1.Checked)
             {
@@ -201,5 +194,7 @@ namespace Square
 
             
         }
+
+        
     }
 }

@@ -219,6 +219,7 @@ namespace Square
             this.button15.TabIndex = 16;
             this.button15.Text = "+/-";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button18
             // 
@@ -387,6 +388,7 @@ namespace Square
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.textBox2.Location = new System.Drawing.Point(22, 98);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(156, 45);
             this.textBox2.TabIndex = 33;
             this.textBox2.Text = "0";
@@ -397,6 +399,7 @@ namespace Square
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.textBox3.Location = new System.Drawing.Point(221, 98);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(156, 45);
             this.textBox3.TabIndex = 34;
             this.textBox3.Text = "0";
