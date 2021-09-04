@@ -45,7 +45,7 @@ namespace Square
 
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
-            Button C = (Button)sender;
+            Button C = (Button)sender; // почему C ?
             if (textBox1.Text == "0")
             {
                 textBox1.Text = C.Text;
@@ -55,6 +55,11 @@ namespace Square
                 textBox1.Text = textBox1.Text + C.Text;
             }
             
+        }
+
+        private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
+        {
+            double number = double.Parse(textBox1.Text);
         }
     }
 }
