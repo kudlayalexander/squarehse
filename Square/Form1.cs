@@ -78,6 +78,8 @@ namespace Square
                     sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
                     textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
                     sqrt.positive = true;
+                    button18.Enabled = false;
+                    button15.Enabled = false;
                 }
             }
             if (analit)
@@ -86,19 +88,19 @@ namespace Square
                 {
                     sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
 
-                    sqrt.analSqrt = sqrt.GetAnalSqrt();
-                    textBox1.Text = $"{sqrt.analSqrt}";
+                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                    textBox1.Text = $"{sqrt.analitSqrt}";
                 }
                 else
                 {
                     sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
-                    sqrt.analSqrt = sqrt.GetAnalSqrt();
-                    textBox1.Text = $"±{sqrt.analSqrt}i";
+                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                    textBox1.Text = $"±{sqrt.analitSqrt}i";
                     sqrt.positive = true;
-
+                    button18.Enabled = false;
+                    button15.Enabled = false;
                 }
             }
-
 
             button13.Enabled = true; // включает запятую
         }
@@ -136,6 +138,10 @@ namespace Square
         {
             textBox1.Text = "0";
             button13.Enabled = true; // включает запятую
+            button18.Enabled = true;
+            button15.Enabled = true;
+
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
@@ -190,7 +196,7 @@ namespace Square
                 }
             }
 
-            
+
         }
 
         

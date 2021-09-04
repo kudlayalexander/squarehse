@@ -12,7 +12,7 @@ namespace MyLib
         public bool positive { get; set; }
         public double doubleSqrt { get; set; } // поле с результатом после обычного вычисления корня
 
-        public double analSqrt { get; set; } // поле с результатом после аналитического вычисления
+        public double analitSqrt { get; set; } // поле с результатом после аналитического вычисления
 
         public double number { get; set; } // поле с числом, их которого будем брать корень
 
@@ -30,19 +30,19 @@ namespace MyLib
             return Math.Round(result, (int)iter);
         }
 
-        public double AnalFunc(double n, double a) // метод который нужен в методе GetAnalSqrt
+        public double AnalitFunc(double n, double a) // метод который нужен в методе GetAnalitSqrt
         {
             return (double)(1 / 2) * (n + (double)(a / n));
         }
 
-        public double GetAnalSqrt() // возвращает значение анал корня
+        public double GetAnalitSqrt() // возвращает значение анал корня
         {
             double n = 1;
             double result = 0;
 
                 for (int i = 0; i <= iter; i++)
                 {
-                    result = AnalFunc(n, number);
+                    result = AnalitFunc(n, number);
                     n = result;
                 }
 
