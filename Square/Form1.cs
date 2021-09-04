@@ -93,7 +93,10 @@ namespace Square
         {
             if (radioButton2.Checked)
             {
-                MessageBox.Show("Вы выбрали " + radioButton2.Text);
+                // отключение кнопок при нажатии на реал.числа
+                button15.Enabled = false;
+                button16.Enabled = false;
+                button17.Enabled = false;
             }
         }
 
@@ -101,8 +104,26 @@ namespace Square
         {
             if (radioButton1.Checked)
             {
-                MessageBox.Show("Вы выбрали " + radioButton1.Text);
+                // включение кнопок при нажатии на компл.числа
+                button15.Enabled = true;   
+                button16.Enabled = true;
+                button17.Enabled = true;
             }
+        }
+
+        private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
+        {
+            textBox1.Text = "0";
+        }
+
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
