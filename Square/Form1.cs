@@ -39,14 +39,9 @@ namespace Square
         }
         
 
-        private void button4_Click(object sender, EventArgs e) //  цифра 1
-        {
-            
-        }
 
         private void groupBox1_Enter(object sender, EventArgs e) // выбор типа
         {
-            Controls.Add(button1);
 
         }
 
@@ -158,5 +153,11 @@ namespace Square
                 Application.Exit();
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
