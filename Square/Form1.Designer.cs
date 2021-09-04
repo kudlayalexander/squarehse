@@ -53,6 +53,7 @@ namespace Square
             this.button20 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -253,9 +254,9 @@ namespace Square
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(629, 25);
+            this.groupBox1.Location = new System.Drawing.Point(607, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(143, 104);
+            this.groupBox1.Size = new System.Drawing.Size(165, 104);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Тип данных";
@@ -289,11 +290,21 @@ namespace Square
             this.button1.Text = "О программе";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(607, 157);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(165, 103);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Способ извлечеия корня";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button20);
@@ -351,6 +362,7 @@ namespace Square
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
