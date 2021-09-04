@@ -43,7 +43,6 @@ namespace Square
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -221,17 +220,6 @@ namespace Square
             this.button15.TabIndex = 16;
             this.button15.Text = "+/-";
             this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Enabled = false;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button16.Location = new System.Drawing.Point(265, 311);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 75);
-            this.button16.TabIndex = 17;
-            this.button16.Text = "i";
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // button18
             // 
@@ -444,7 +432,6 @@ namespace Square
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
-            this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -487,7 +474,6 @@ namespace Square
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.TextBox textBox1;
