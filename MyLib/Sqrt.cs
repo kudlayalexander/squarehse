@@ -24,7 +24,8 @@ namespace MyLib
 
         public double GetDoubleSqrt()
         {
-            return Math.Sqrt(number);
+            double result =  Math.Sqrt(number);
+            return Math.Round(result, (int)iter);
         }
 
         /*
@@ -42,7 +43,7 @@ namespace MyLib
 
         public double AnalFunc(double n, double a)
         {
-            return (1 / 2) * (n + a / n);
+            return (double)(1 / 2) * (n + (double)(a / n));
         }
 
         public double GetAnalSqrt()
@@ -50,11 +51,13 @@ namespace MyLib
             double n = 1;
             double result = 0;
 
-            for (int i = 0; i < iter; i++)
-            {
-                result = AnalFunc(n, number);
-                n = result;
-            }
+                for (int i = 0; i <= iter; i++)
+                {
+                    result = AnalFunc(n, number);
+                    n = result;
+                }
+
+
 
             return result;
 
