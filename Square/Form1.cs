@@ -103,8 +103,6 @@ namespace Square
 
 
             button13.Enabled = true; // включает запятую
-
-
         }
 
         private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
