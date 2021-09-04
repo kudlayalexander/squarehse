@@ -77,6 +77,11 @@ namespace Square
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.numericUpDown1.Location = new System.Drawing.Point(455, 22);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(115, 45);
             this.numericUpDown1.TabIndex = 2;
@@ -312,7 +317,7 @@ namespace Square
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(683, 512);
+            this.button22.Location = new System.Drawing.Point(673, 500);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(99, 49);
             this.button22.TabIndex = 27;
