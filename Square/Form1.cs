@@ -16,6 +16,8 @@ namespace Square
     {
         public double value { get; set; }
         Counter counter = new Counter();
+        Sqrt sqrt = new Sqrt();
+
         public Form1()
         {
             InitializeComponent();
@@ -52,26 +54,34 @@ namespace Square
 
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
-            Button C = (Button)sender; // почему C ?
+            Button buttonNumber = (Button)sender; // почему C ?
             if (textBox1.Text == "0")
             {
-                textBox1.Text = C.Text;
+                textBox1.Text = buttonNumber.Text;
             }
             else
             {
-                textBox1.Text = textBox1.Text + C.Text;
+                textBox1.Text = textBox1.Text + buttonNumber.Text;
             }
             
         }
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
-            double number = double.Parse(textBox1.Text);
+            counter.number = double.Parse(textBox1.Text);
+            sqrt.doubleSqrt = sqrt.GetDoubleSqrt(counter.number);
+            textBox1.Text = $"{sqrt.doubleSqrt}";
+
         }
 
         private void button20_Click(object sender, EventArgs e) // кнопка с надписью:"точность ввода"
         {
             MessageBox.Show($"{counter.count}");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

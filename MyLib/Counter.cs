@@ -9,10 +9,12 @@ namespace MyLib
     public class Counter
     {
         public double count { get; set; }
+        public double number { get; set; }
 
-        public Counter (double count = 0)
+        public Counter (double count=0, double number=0)
         {
             this.count = count;
+            this.number = number;
         }
     }
 }
