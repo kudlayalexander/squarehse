@@ -14,6 +14,9 @@ namespace Square
 {
     public partial class Form1 : Form
     {
+        public bool simple = true;
+        public bool analit = false;
+
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
@@ -69,10 +72,18 @@ namespace Square
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
             sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
-            sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
-            sqrt.analSqrt = sqrt.GetAnalSqrt();// аналогично
-            textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
-            //textBox1.Text = $"{sqrt.analSqrt}";
+            if (simple)
+            {
+                sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+
+            }
+            if (analit)
+            {
+                sqrt.analSqrt = sqrt.GetAnalSqrt();// аналогично
+                textBox1.Text = $"{sqrt.analSqrt}";
+            }
+
 
             button13.Enabled = true; // включает запятую
 
@@ -117,14 +128,16 @@ namespace Square
             button13.Enabled = true; // включает запятую
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способ извл. корня:  Обычный
+        private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
         {
-
+            simple = false;
+            analit = true;
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
+        private void radioButton3_CheckedChanged(object sender, EventArgs e) // Способ извл. корня:  Обычный
         {
-
+            simple = true;
+            analit = false;
         }
 
         private void button13_Click(object sender, EventArgs e) // Ввод запятой
