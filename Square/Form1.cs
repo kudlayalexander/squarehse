@@ -136,5 +136,14 @@ namespace Square
                 button13.Enabled = false;
             }
         }
+
+        private void button22_Click(object sender, EventArgs e) // Выход из программы
+        {
+            DialogResult res = MessageBox.Show("Вы точно хотите выйти из программу ?", "Выход из программы ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

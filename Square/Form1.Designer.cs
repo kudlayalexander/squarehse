@@ -204,6 +204,7 @@ namespace Square
             // 
             // button15
             // 
+            this.button15.Enabled = false;
             this.button15.Location = new System.Drawing.Point(495, 238);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 75);
@@ -213,6 +214,7 @@ namespace Square
             // 
             // button16
             // 
+            this.button16.Enabled = false;
             this.button16.Location = new System.Drawing.Point(414, 400);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(75, 75);
@@ -222,6 +224,7 @@ namespace Square
             // 
             // button17
             // 
+            this.button17.Enabled = false;
             this.button17.Location = new System.Drawing.Point(495, 319);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 75);
@@ -293,7 +296,6 @@ namespace Square
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(96, 17);
             this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Комплексные";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -316,6 +318,7 @@ namespace Square
             this.button22.TabIndex = 27;
             this.button22.Text = "Выход";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button1
             // 
@@ -344,7 +347,6 @@ namespace Square
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(102, 17);
             this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Аналитический";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
@@ -393,7 +395,7 @@ namespace Square
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Извлекатель";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
