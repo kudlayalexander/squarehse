@@ -16,7 +16,6 @@ namespace Square
     {
         public bool simple = true;
         public bool analit = false;
-
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
@@ -66,17 +65,40 @@ namespace Square
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
-            sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+
             if (simple)
             {
-                sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
-                textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
-
+                if (sqrt.positive)
+                {
+                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                    textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+                }
+                else
+                {
+                    sqrt.number = double.Parse(textBox1.Text.Replace("-",""));// приводим строку, которая в дисплее в тип double и удаляем -
+                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
+                    textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
+                    sqrt.positive = true;
+                }
             }
             if (analit)
             {
-                sqrt.analSqrt = sqrt.GetAnalSqrt();// аналогично
-                textBox1.Text = $"{sqrt.analSqrt}";
+                if (sqrt.positive)
+                {
+                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+
+                    sqrt.analSqrt = sqrt.GetAnalSqrt();
+                    textBox1.Text = $"{sqrt.analSqrt}";
+                }
+                else
+                {
+                    sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
+                    sqrt.analSqrt = sqrt.GetAnalSqrt();
+                    textBox1.Text = $"±{sqrt.analSqrt}i";
+                    sqrt.positive = true;
+
+                }
             }
 
 
@@ -161,5 +183,23 @@ namespace Square
 
         }
 
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "0")
+            {
+                if (sqrt.positive)
+                {
+                    textBox1.Text = "-" + textBox1.Text;
+                    sqrt.positive = false;
+                }
+                else
+                {
+                    textBox1.Text = textBox1.Text.Replace("-", "");
+                    sqrt.positive = true;
+                }
+            }
+
+            
+        }
     }
 }

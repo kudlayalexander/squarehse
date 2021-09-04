@@ -212,11 +212,10 @@ namespace Square
             // 
             // button15
             // 
-            this.button15.Enabled = false;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button15.Location = new System.Drawing.Point(265, 230);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 75);
+            this.button15.Size = new System.Drawing.Size(75, 156);
             this.button15.TabIndex = 16;
             this.button15.Text = "+/-";
             this.button15.UseVisualStyleBackColor = true;
