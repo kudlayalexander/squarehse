@@ -44,8 +44,6 @@ namespace MyLib
                     n = result;
                 }
 
-
-
             return result;
 
         }
