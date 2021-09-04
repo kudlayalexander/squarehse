@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyLib;
 
 
 namespace Square
@@ -16,6 +17,7 @@ namespace Square
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e) // О программе
@@ -23,17 +25,18 @@ namespace Square
 
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e) // выбор типа
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) // счетчик точности
         {
-
+            double count = 
         }
+        
 
         private void button4_Click(object sender, EventArgs e) //  цифра 1
         {
             
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e) // выбор типа
         {
 
         }
