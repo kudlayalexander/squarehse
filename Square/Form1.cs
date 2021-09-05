@@ -152,8 +152,17 @@ namespace Square
                 textBox1.Visible = true;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
+                textBox4.Visible = false;
+                textBox5.Visible = false;
+
                 label3.Visible = false;
                 label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label7.Visible = false;
+                label8.Visible = false;
+                label9.Visible = false;
+
                 real = true;
                 complex = false;
 
@@ -168,8 +177,16 @@ namespace Square
                 textBox1.Visible = false;
                 textBox2.Visible = true;
                 textBox3.Visible = true;
+                textBox4.Visible = true;
+                textBox5.Visible = true;
+
                 label3.Visible = true;
                 label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                label8.Visible = true;
+                label9.Visible = true;
                 real = false;
                 complex = true;
             }
@@ -279,5 +296,6 @@ namespace Square
             if (textBox3.Text.Count(x => x == ',') == 0)
                 button13.Enabled = true;
         }
+
     }
 }
