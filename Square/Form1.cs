@@ -18,7 +18,6 @@ namespace Square
         public bool analit = false;
         public bool real = true;
         public bool complex = false;
-
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
@@ -66,6 +65,7 @@ namespace Square
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
+
             if (real)
             {
                 if (simple)
@@ -130,6 +130,7 @@ namespace Square
                 label3.Visible = false;
                 real = true;
                 complex = false;
+
             }
         }
 
