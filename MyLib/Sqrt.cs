@@ -11,13 +11,9 @@ namespace MyLib
     {
         public bool positive { get; set; }
         public double doubleSqrt { get; set; } // поле с результатом после обычного вычисления корня
-
         public double analitSqrt { get; set; } // поле с результатом после аналитического вычисления
-
         public double number { get; set; } // поле с числом, их которого будем брать корень
-
         public double iter { get; set; } // точность
-
         public Sqrt (double number=0) // конструктор, который при создании экземпляра класса Sqrt  присвоит полю number нужное нам число
         {
             this.number = number;
