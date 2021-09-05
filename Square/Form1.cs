@@ -16,11 +16,12 @@ namespace Square
     {
         public bool simple = true;
         public bool analit = false;
-        public bool real = true;
-        public bool complex = false;
+        public bool isreal = true;
+        public bool iscomplex = false;
         public bool textBox2Clicked = true;
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
+        Complex complex = new Complex();
 
         public Form1()
         {
@@ -91,7 +92,7 @@ namespace Square
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
-            if (real)
+            if (isreal)
             {
                 if (simple)
                 {
@@ -131,8 +132,13 @@ namespace Square
                     }
                 }
             }
-            if (complex)
+            if (iscomplex)
             {
+                complex.real = double.Parse(textBox2.Text);
+                complex.imaginary = double.Parse(textBox3.Text);
+                complex.WholeProcess();
+                
+
 
             }
 
@@ -154,8 +160,8 @@ namespace Square
                 textBox3.Visible = false;
                 label3.Visible = false;
                 label4.Visible = false;
-                real = true;
-                complex = false;
+                isreal = true;
+                iscomplex = false;
 
             }
         }
@@ -170,8 +176,8 @@ namespace Square
                 textBox3.Visible = true;
                 label3.Visible = true;
                 label4.Visible = true;
-                real = false;
-                complex = true;
+                isreal = false;
+                iscomplex = true;
             }
         }
 
@@ -279,5 +285,6 @@ namespace Square
             if (textBox3.Text.Count(x => x == ',') == 0)
                 button13.Enabled = true;
         }
+
     }
 }

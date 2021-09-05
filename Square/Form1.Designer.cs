@@ -47,6 +47,7 @@ namespace Square
             this.button19 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button22 = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@ namespace Square
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -273,6 +273,17 @@ namespace Square
             this.groupBox1.Text = "Тип данных";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 65);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(104, 17);
+            this.radioButton5.TabIndex = 2;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Длинные числа";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -433,17 +444,6 @@ namespace Square
             this.label4.TabIndex = 36;
             this.label4.Text = "i";
             this.label4.Visible = false;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 65);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(104, 17);
-            this.radioButton5.TabIndex = 2;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Длинные числа";
-            this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
