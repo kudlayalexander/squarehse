@@ -69,6 +69,7 @@ namespace Square
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -283,7 +284,6 @@ namespace Square
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Enabled = false;
             this.radioButton5.Location = new System.Drawing.Point(7, 65);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(143, 17);
@@ -291,6 +291,7 @@ namespace Square
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Длинные числа ( beta ) ";
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -532,11 +533,22 @@ namespace Square
             this.label9.Text = "2";
             this.label9.Visible = false;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(404, 186);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox6.Size = new System.Drawing.Size(318, 292);
+            this.textBox6.TabIndex = 44;
+            this.textBox6.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox5);
@@ -626,6 +638,7 @@ namespace Square
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
 
