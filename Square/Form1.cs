@@ -18,6 +18,7 @@ namespace Square
         public bool analit = false;
         public bool real = true;
         public bool complex = false;
+        public bool textBox2Clicked = true;
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
@@ -68,6 +69,23 @@ namespace Square
                     textBox1.Text = textBox1.Text;
                 }
             }
+            else
+            {
+                if (textBox2Clicked == true)  // ввод при клике пользователя 
+                {
+                    if (textBox2.Text == "0")
+                        textBox2.Text = buttonNumber.Text;
+                    else
+                        textBox2.Text = textBox2.Text + buttonNumber.Text;
+                }
+                else
+                {
+                    if (textBox3.Text == "0")
+                        textBox3.Text = buttonNumber.Text;
+                    else
+                        textBox3.Text = textBox3.Text + buttonNumber.Text;
+                }
+            }        
         }
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
@@ -135,6 +153,7 @@ namespace Square
                 textBox2.Visible = false;
                 textBox3.Visible = false;
                 label3.Visible = false;
+                label4.Visible = false;
                 real = true;
                 complex = false;
 
@@ -150,6 +169,7 @@ namespace Square
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 label3.Visible = true;
+                label4.Visible = true;
                 real = false;
                 complex = true;
             }
@@ -157,7 +177,16 @@ namespace Square
 
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
-            textBox1.Text = "0";
+            if (radioButton2.Checked)
+            {
+                textBox1.Text = "0";
+            }
+            else
+            {
+                textBox2.Text = "0";
+                textBox3.Text = "0";
+            }
+            
             button13.Enabled = true; // включает запятую
             button18.Enabled = true;
             button15.Enabled = true;
@@ -180,11 +209,28 @@ namespace Square
         private void button13_Click(object sender, EventArgs e) // Ввод запятой
         {
             Button buttonComma = (Button)sender;
-            if (textBox1.Text.Count(x => x == ',') == 0)
+            if (radioButton2.Checked)
             {
-                textBox1.Text = textBox1.Text + buttonComma.Text;
-                button13.Enabled = false;
+                if (textBox1.Text.Count(x => x == ',') == 0)
+                {
+                    textBox1.Text = textBox1.Text + buttonComma.Text;
+                    button13.Enabled = false;
+                }
             }
+            else
+            {
+                if (textBox2Clicked)
+                {
+                    textBox2.Text = textBox2.Text + buttonComma.Text;
+                    button13.Enabled = false;
+                }
+                else
+                {
+                    textBox3.Text = textBox3.Text + buttonComma.Text;
+                    button13.Enabled = false;
+                }
+            }
+            
         }
 
         private void button22_Click(object sender, EventArgs e) // Выход из программы
@@ -201,7 +247,7 @@ namespace Square
 
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e) //смена знака
         {
             if (textBox1.Text != "0")
             {
@@ -220,6 +266,18 @@ namespace Square
 
         }
 
-        
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2Clicked = true;
+            if (textBox2.Text.Count(x => x == ',') == 0)
+                button13.Enabled = true;
+        }
+
+        private void textBox3_Click(object sender, EventArgs e)
+        {
+            textBox2Clicked = false;
+            if (textBox3.Text.Count(x => x == ',') == 0)
+                button13.Enabled = true;
+        }
     }
 }

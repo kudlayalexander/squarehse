@@ -60,6 +60,8 @@ namespace Square
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -252,6 +254,7 @@ namespace Square
             this.textBox1.Location = new System.Drawing.Point(22, 98);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textBox1.Size = new System.Drawing.Size(365, 45);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "0";
@@ -259,11 +262,12 @@ namespace Square
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton5);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Location = new System.Drawing.Point(417, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(165, 67);
+            this.groupBox1.Size = new System.Drawing.Size(165, 89);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Тип данных";
@@ -340,10 +344,10 @@ namespace Square
             this.radioButton3.Checked = true;
             this.radioButton3.Location = new System.Drawing.Point(7, 19);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(72, 17);
+            this.radioButton3.Size = new System.Drawing.Size(112, 17);
             this.radioButton3.TabIndex = 0;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Обычный";
+            this.radioButton3.Text = "Арифметический";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -393,6 +397,8 @@ namespace Square
             this.textBox2.TabIndex = 33;
             this.textBox2.Text = "0";
             this.textBox2.Visible = false;
+            this.textBox2.WordWrap = false;
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // textBox3
             // 
@@ -404,6 +410,7 @@ namespace Square
             this.textBox3.TabIndex = 34;
             this.textBox3.Text = "0";
             this.textBox3.Visible = false;
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // label3
             // 
@@ -416,11 +423,34 @@ namespace Square
             this.label3.Text = "+";
             this.label3.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label4.Location = new System.Drawing.Point(376, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 46);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "i";
+            this.label4.Visible = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(7, 65);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(104, 17);
+            this.radioButton5.TabIndex = 2;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Длинные числа";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -493,6 +523,8 @@ namespace Square
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radioButton5;
     }
 }
 
