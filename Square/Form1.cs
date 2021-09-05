@@ -166,8 +166,8 @@ namespace Square
                 label8.Visible = false;
                 label9.Visible = false;
 
-                real = true;
-                complex = false;
+                isreal = true;
+                iscomplex = false;
 
 
             }
