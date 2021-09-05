@@ -56,10 +56,17 @@ namespace Square
             Button buttonNumber = (Button)sender;
             if (radioButton2.Checked)
             {
-                if (textBox1.Text == "0")
-                    textBox1.Text = buttonNumber.Text;
+                if (textBox1.TextLength<20)
+                {
+                    if (textBox1.Text == "0")
+                        textBox1.Text = buttonNumber.Text;
+                    else
+                        textBox1.Text = textBox1.Text + buttonNumber.Text;
+                }
                 else
-                    textBox1.Text = textBox1.Text + buttonNumber.Text;
+                {
+                    textBox1.Text = textBox1.Text;
+                }
             }
         }
 
