@@ -16,6 +16,9 @@ namespace Square
     {
         public bool simple = true;
         public bool analit = false;
+        public bool real = true;
+        public bool complex = false;
+
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
 
@@ -63,43 +66,49 @@ namespace Square
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
-
-            if (simple)
+            if (real)
             {
-                if (sqrt.positive)
+                if (simple)
                 {
-                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
-                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
-                    textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+                    if (sqrt.positive)
+                    {
+                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                        textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+                    }
+                    else
+                    {
+                        sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
+                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
+                        textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
+                        sqrt.positive = true;
+                        button18.Enabled = false;
+                        button15.Enabled = false;
+                    }
                 }
-                else
+                if (analit)
                 {
-                    sqrt.number = double.Parse(textBox1.Text.Replace("-",""));// приводим строку, которая в дисплее в тип double и удаляем -
-                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
-                    textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
-                    sqrt.positive = true;
-                    button18.Enabled = false;
-                    button15.Enabled = false;
+                    if (sqrt.positive)
+                    {
+                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+
+                        sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                        textBox1.Text = $"{sqrt.analitSqrt}";
+                    }
+                    else
+                    {
+                        sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
+                        sqrt.analitSqrt = sqrt.GetAnalitSqrt();
+                        textBox1.Text = $"±{sqrt.analitSqrt}i";
+                        sqrt.positive = true;
+                        button18.Enabled = false;
+                        button15.Enabled = false;
+                    }
                 }
             }
-            if (analit)
+            if (complex)
             {
-                if (sqrt.positive)
-                {
-                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
 
-                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
-                    textBox1.Text = $"{sqrt.analitSqrt}";
-                }
-                else
-                {
-                    sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
-                    sqrt.analitSqrt = sqrt.GetAnalitSqrt();
-                    textBox1.Text = $"±{sqrt.analitSqrt}i";
-                    sqrt.positive = true;
-                    button18.Enabled = false;
-                    button15.Enabled = false;
-                }
             }
 
             button13.Enabled = true; // включает запятую
@@ -119,6 +128,8 @@ namespace Square
                 textBox2.Visible = false;
                 textBox3.Visible = false;
                 label3.Visible = false;
+                real = true;
+                complex = false;
             }
         }
 
@@ -131,6 +142,8 @@ namespace Square
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 label3.Visible = true;
+                real = false;
+                complex = true;
             }
         }
 
