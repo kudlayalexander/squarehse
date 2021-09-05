@@ -452,7 +452,7 @@ namespace Square
             this.label4.TabIndex = 36;
             this.label4.Text = "i";
             this.label4.Visible = false;
-            //
+            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
