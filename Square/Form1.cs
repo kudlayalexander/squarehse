@@ -163,6 +163,7 @@ namespace Square
                 textBox3.Visible = false;
                 textBox4.Visible = false;
                 textBox5.Visible = false;
+                textBox6.Visible = false;
 
                 label3.Visible = false;
                 label4.Visible = false;
@@ -187,6 +188,7 @@ namespace Square
                 textBox3.Visible = true;
                 textBox4.Visible = true;
                 textBox5.Visible = true;
+                textBox6.Visible = false;
 
                 label3.Visible = true;
                 label4.Visible = true;
@@ -277,21 +279,47 @@ namespace Square
 
         private void button15_Click(object sender, EventArgs e) //смена знака
         {
-            if (textBox1.Text != "0")
+            if (radioButton2.Checked) // для реальных чисел
             {
-                if (sqrt.positive)
+                if (textBox1.Text != "0")
                 {
-                    textBox1.Text = "-" + textBox1.Text;
-                    sqrt.positive = false;
-                }
-                else
-                {
-                    textBox1.Text = textBox1.Text.Replace("-", "");
-                    sqrt.positive = true;
+                    if (sqrt.positive)
+                    {
+                        textBox1.Text = "-" + textBox1.Text;
+                        sqrt.positive = false;
+                    }
+                    else
+                    {
+                        textBox1.Text = textBox1.Text.Replace("-", "");
+                        sqrt.positive = true;
+                    }
                 }
             }
-
-
+            else if (radioButton1.Checked) // для комплексных чисел
+            {
+                if (textBox2Clicked && textBox2.Text != "0") // реальная часть, смена знака
+                {
+                    if (double.Parse(textBox2.Text) > 0)
+                    {
+                        textBox2.Text = "-" + textBox2.Text;
+                    }
+                    else
+                    {
+                        textBox2.Text = textBox2.Text.Replace("-", "");
+                    }
+                }
+                else if (textBox2Clicked == false && textBox3.Text != "0") // мнимая часть, смена знака
+                {
+                    if (double.Parse(textBox3.Text) > 0)
+                    {
+                        textBox3.Text = "-" + textBox3.Text;
+                    }
+                    else
+                    {
+                        textBox3.Text = textBox3.Text.Replace("-", "");
+                    }
+                }
+            }
         }
 
         private void textBox2_Click(object sender, EventArgs e)
@@ -308,5 +336,22 @@ namespace Square
                 button13.Enabled = true;
         }
 
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            label7.Visible = true;
+            textBox6.Visible = true;
+            textBox1.Visible = true;
+
+            label5.Visible = false;
+            label6.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+        }
     }
 }
