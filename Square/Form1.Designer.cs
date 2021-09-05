@@ -262,7 +262,6 @@ namespace Square
             this.textBox1.Location = new System.Drawing.Point(22, 98);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.textBox1.Size = new System.Drawing.Size(365, 45);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "0";
