@@ -21,6 +21,7 @@ namespace Square
         public bool textBox2Clicked = true;
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
+        Complex complex = new Complex();
 
         public Form1()
         {
@@ -133,6 +134,11 @@ namespace Square
             }
             if (iscomplex)
             {
+                complex.real = double.Parse(textBox2.Text);
+                complex.imaginary = double.Parse(textBox3.Text);
+                complex.WholeProcess();
+                
+
 
             }
 
