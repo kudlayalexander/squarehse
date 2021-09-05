@@ -456,11 +456,12 @@ namespace Square
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox4.Location = new System.Drawing.Point(417, 186);
+            this.textBox4.Location = new System.Drawing.Point(404, 186);
+            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox4.Size = new System.Drawing.Size(322, 38);
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox4.Size = new System.Drawing.Size(322, 137);
             this.textBox4.TabIndex = 37;
             this.textBox4.Visible = false;
             // 
@@ -500,11 +501,12 @@ namespace Square
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox5.Location = new System.Drawing.Point(417, 235);
+            this.textBox5.Location = new System.Drawing.Point(404, 329);
+            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox5.Size = new System.Drawing.Size(322, 38);
+            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox5.Size = new System.Drawing.Size(322, 150);
             this.textBox5.TabIndex = 41;
             this.textBox5.Visible = false;
             // 
@@ -512,7 +514,7 @@ namespace Square
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label8.Location = new System.Drawing.Point(382, 189);
+            this.label8.Location = new System.Drawing.Point(369, 186);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 31);
             this.label8.TabIndex = 42;
@@ -523,7 +525,7 @@ namespace Square
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label9.Location = new System.Drawing.Point(382, 242);
+            this.label9.Location = new System.Drawing.Point(369, 329);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 31);
             this.label9.TabIndex = 43;
