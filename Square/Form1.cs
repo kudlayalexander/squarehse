@@ -160,8 +160,15 @@ namespace Square
                 textBox3.Visible = false;
                 label3.Visible = false;
                 label4.Visible = false;
-                isreal = true;
-                iscomplex = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label7.Visible = false;
+                label8.Visible = false;
+                label9.Visible = false;
+
+                real = true;
+                complex = false;
+
 
             }
         }
