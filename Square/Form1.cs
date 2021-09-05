@@ -18,10 +18,13 @@ namespace Square
         public bool analit = false;
         public bool isreal = true;
         public bool iscomplex = false;
+        public bool islong = false;
         public bool textBox2Clicked = true;
+
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
         Complex complex = new Complex();
+        LongNumbers longNumber = new LongNumbers();
 
         public Form1()
         {
@@ -52,7 +55,7 @@ namespace Square
             Button buttonNumber = (Button)sender;
             if (radioButton2.Checked)
             {
-                if (textBox1.TextLength<20)
+                if (textBox1.TextLength<40)
                 {
                     if (textBox1.Text == "0")
                         textBox1.Text = buttonNumber.Text;
@@ -64,23 +67,29 @@ namespace Square
                     textBox1.Text = textBox1.Text;
                 }
             }
+
+            if (textBox2Clicked == true)  // ввод при клике пользователя 
+            {
+                if (textBox2.Text == "0")
+                    textBox2.Text = buttonNumber.Text;
+                else
+                    textBox2.Text = textBox2.Text + buttonNumber.Text;
+            }
             else
             {
-                if (textBox2Clicked == true)  // ввод при клике пользователя 
-                {
-                    if (textBox2.Text == "0")
-                        textBox2.Text = buttonNumber.Text;
-                    else
-                        textBox2.Text = textBox2.Text + buttonNumber.Text;
-                }
+                if (textBox3.Text == "0")
+                    textBox3.Text = buttonNumber.Text;
                 else
-                {
-                    if (textBox3.Text == "0")
-                        textBox3.Text = buttonNumber.Text;
-                    else
-                        textBox3.Text = textBox3.Text + buttonNumber.Text;
-                }
-            }        
+                    textBox3.Text = textBox3.Text + buttonNumber.Text;
+            }
+
+            if (radioButton5.Checked)
+            {
+                if (textBox6.Text == "0")
+                    textBox6.Text = buttonNumber.Text;
+                else
+                    textBox6.Text = textBox6.Text + buttonNumber.Text;
+            }
         }
 
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
@@ -137,6 +146,10 @@ namespace Square
 
 
 
+            }
+            if (islong)
+            {
+                longNumber.number = textBox6.Text;
             }
 
             button13.Enabled = true; // включает запятую
@@ -332,6 +345,8 @@ namespace Square
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             label7.Visible = true;
+            label2.Visible = true;
+            numericUpDown1.Visible = true;
             textBox6.Visible = true;
             textBox1.Visible = true;
 
@@ -346,5 +361,7 @@ namespace Square
             textBox4.Visible = false;
             textBox5.Visible = false;
         }
+
+
     }
 }

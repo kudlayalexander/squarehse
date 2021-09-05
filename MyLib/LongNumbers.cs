@@ -9,6 +9,11 @@ namespace MyLib
 {
     public class LongNumbers
     {
+        public string number { get; set; }
 
+        public LongNumbers()
+        {
+            this.number = "0";
+        }
     }
 }
