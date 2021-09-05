@@ -137,7 +137,10 @@ namespace Square
                 complex.real = double.Parse(textBox2.Text);
                 complex.imaginary = double.Parse(textBox3.Text);
                 complex.WholeProcess();
-                
+                textBox4.Text = complex.sqrtTrig1;
+                textBox5.Text = complex.sqrtTrig2;
+
+
 
 
             }
@@ -203,12 +206,15 @@ namespace Square
             {
                 textBox1.Text = "0";
             }
-            else
+            if (radioButton1.Checked)
             {
                 textBox2.Text = "0";
                 textBox3.Text = "0";
+                textBox4.Text = "0";
+                textBox5.Text = "0";
+
             }
-            
+
             button13.Enabled = true; // включает запятую
             button18.Enabled = true;
             button15.Enabled = true;

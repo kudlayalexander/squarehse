@@ -93,9 +93,15 @@ namespace MyLib
 
         public void CalculateSqrt()
         {
-            sqrtTrig1 =$"{Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2)} + i{Math.Sin((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2)}";
+            double re1 = Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2);
+            double im1 = Math.Sin((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2);
+            double re2 = Math.Cos((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2);
+            double im2 = Math.Sin((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2);
+            if (im1 >= 0) sqrtTrig1 = $"{re1}  +  {im1}i";
+            else sqrtTrig1 = $"{re1}" + $"{im1}"[0] + $"{im1}".Replace("-", "") + "i";
 
-            sqrtTrig2 = $"{Math.Cos((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2)} + i{Math.Sin((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2)}";
+            if (im2 >= 0) sqrtTrig2 = $"{re2} + {im2}i";
+            else sqrtTrig2 = $"{re2}  " + $"{im2}"[0] + $"  {im2}".Replace("-", "") + "i";
         }
 
         public void WholeProcess()
