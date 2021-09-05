@@ -165,7 +165,6 @@ namespace Square
 
                 isreal = true;
                 iscomplex = false;
-
             }
         }
 
