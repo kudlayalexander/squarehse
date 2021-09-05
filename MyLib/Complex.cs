@@ -18,6 +18,8 @@ namespace MyLib
         public bool realPositive { get; set; }
         public bool imaginaryPositive { get; set; }
         public int quarter { get; set; }
+        public string sqrtTrig1 { get; set; }
+        public string sqrtTrig2 { get; set; }
 
 
 
@@ -29,16 +31,19 @@ namespace MyLib
             this.operation = operation;
             this.realPositive = realPositive;
             this.imaginaryPositive = imaginaryPositive;
-            module = Math.Sqrt(Math.Pow(real, 2) + Math.Pow(imaginary, 2));
+            SetModule();
             SetArgument();
             realTrig = module * Math.Cos(argument);
             imaginaryTrig = module * Math.Sin(argument);
 
-
-
         }
 
-        public void GetQuarter()
+        public void SetModule()
+        {
+            module = Math.Sqrt(Math.Pow(real, 2) + Math.Pow(imaginary, 2));
+        }
+
+        public void SetQuarter()
         {
             if (realPositive && imaginaryPositive)
             {
@@ -61,7 +66,7 @@ namespace MyLib
         public void SetArgument()
         {
 
-            GetQuarter();
+            SetQuarter();
 
             switch (quarter)
             {
@@ -87,9 +92,11 @@ namespace MyLib
             }
         }
 
-        public void setTrig()
+        public void CalculateSqrt()
         {
+            sqrtTrig1 =$"{Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2)} + i{Math.Sin((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2)}";
 
+            sqrtTrig2 = $"{Math.Cos((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2)} + i{Math.Sin((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2)}";
         }
 
 
