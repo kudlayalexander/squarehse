@@ -158,6 +158,8 @@ namespace Square
             if (radioButton2.Checked)
             {
                 // отключение кнопок при нажатии на реал.числа
+                numericUpDown1.Visible = true;
+                label2.Visible = true;
                 textBox1.Visible = true;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
@@ -183,6 +185,8 @@ namespace Square
             if (radioButton1.Checked)
             {
                 // включение кнопок при нажатии на компл.числа
+                numericUpDown1.Visible = false;
+                label2.Visible = false;
                 textBox1.Visible = false;
                 textBox2.Visible = true;
                 textBox3.Visible = true;
