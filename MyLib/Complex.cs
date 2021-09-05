@@ -90,7 +90,7 @@ namespace MyLib
                     break;
             }
         }
-
+        /// commit
         public void CalculateSqrt()
         {
             double re1 = Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2);
