@@ -168,8 +168,6 @@ namespace Square
 
                 isreal = true;
                 iscomplex = false;
-
-
             }
         }
 
@@ -183,6 +181,11 @@ namespace Square
                 textBox3.Visible = true;
                 label3.Visible = true;
                 label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label7.Visible = true;
+                label8.Visible = true;
+                label9.Visible = true;
                 isreal = false;
                 iscomplex = true;
             }

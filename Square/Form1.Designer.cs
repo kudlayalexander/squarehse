@@ -452,7 +452,7 @@ namespace Square
             this.label4.TabIndex = 36;
             this.label4.Text = "i";
             this.label4.Visible = false;
-
+            //
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
@@ -529,7 +529,6 @@ namespace Square
             this.label9.TabIndex = 43;
             this.label9.Text = "2";
             this.label9.Visible = false;
-
             // 
             // Form1
             // 
