@@ -9,6 +9,7 @@ namespace MyLib
 {
     public class Sqrt
     {
+        // comment
         public bool positive { get; set; }
         public double doubleSqrt { get; set; } // поле с результатом после обычного вычисления корня
         public double analitSqrt { get; set; } // поле с результатом после аналитического вычисления
