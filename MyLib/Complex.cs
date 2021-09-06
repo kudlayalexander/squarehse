@@ -93,10 +93,10 @@ namespace MyLib
         /// commit
         public void CalculateSqrt()
         {
-            double re1 = Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2);
-            double im1 = Math.Sin((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Pow(module, 2);
-            double re2 = Math.Cos((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2);
-            double im2 = Math.Sin((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Pow(module, 2);
+            double re1 = Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Sqrt(module);
+            double im1 = Math.Sin((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Sqrt(module);
+            double re2 = Math.Cos((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Sqrt(module);
+            double im2 = Math.Sin((double)((argument + 2 * Math.PI * 1) / 2)) * Math.Sqrt(module);
             if (im1 >= 0) sqrtTrig1 = $"{re1}  +  {im1}i";
             else sqrtTrig1 = $"{re1}" + $"{im1}"[0] + $"{im1}".Replace("-", "") + "i";
 
