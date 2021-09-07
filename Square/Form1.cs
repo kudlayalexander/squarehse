@@ -28,9 +28,9 @@ namespace Square
 
         public Form1()
         {
-
             InitializeComponent();
         }
+
 
         private void button1_Click(object sender, EventArgs e) // О программе
         {
@@ -44,6 +44,12 @@ namespace Square
 
         }
         
+
+
+        private void groupBox1_Enter(object sender, EventArgs e) // выбор типа
+        {
+
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -276,11 +282,16 @@ namespace Square
 
         private void button22_Click(object sender, EventArgs e) // Выход из программы
         {
-            DialogResult res = MessageBox.Show("Вы уверены, что хотите выйти?", "Выход", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult res = MessageBox.Show("Вы точно хотите выйти из программу ?", "Выход из программы ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (res == DialogResult.Yes)
             {
                 Application.Exit();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button15_Click(object sender, EventArgs e) //смена знака
