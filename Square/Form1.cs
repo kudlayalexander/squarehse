@@ -25,7 +25,7 @@ namespace Square
         public string textForLabel2 { get; set; }
 
 
-        public void SetRusssian()
+        public void SetRusssian() // Русский язык
         {
             isRussian = true;
             isEnglish = false;
@@ -54,7 +54,7 @@ namespace Square
 
         }
 
-        public void SetEnglish()
+        public void SetEnglish() // Английский
         {
             isRussian = false;
             isEnglish = true;
@@ -83,7 +83,7 @@ namespace Square
 
         }
 
-        public void SetSpanish()
+        public void SetSpanish() // Испанский
         {
             isRussian = false;
             isEnglish = false;
@@ -112,7 +112,7 @@ namespace Square
 
         }
 
-        public void SetChinese()
+        public void SetChinese() // Китайский
         {
             isRussian = false;
             isEnglish = false;
@@ -144,7 +144,7 @@ namespace Square
 
         }
 
-        public void SetHindi()
+        public void SetHindi() // Хинди
         {
             isRussian = false;
             isEnglish = false;
@@ -196,7 +196,7 @@ namespace Square
         }
 
 
-        private void button1_Click(object sender, EventArgs e) // О программе
+        private void button1_Click(object sender, EventArgs e) // Кнопка "О программе"
         {
 
         }
@@ -208,14 +208,7 @@ namespace Square
 
         }
         
-
-
-        private void groupBox1_Enter(object sender, EventArgs e) // выбор типа
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Кнопка "Связь"
         {
 
         }
@@ -330,11 +323,6 @@ namespace Square
             }
 
             button13.Enabled = true; // включает запятую
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e) // Реальные числа, переключатель
@@ -473,31 +461,21 @@ namespace Square
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // при выборе языка он меняется
         {
             if (comboBox1.Text == "Russian(Русский)")
-            {
                 SetRusssian();
-            }
             if (comboBox1.Text == "English")
-            {
                 SetEnglish();
-            }
             if (comboBox1.Text == "Hindi(हिन्दी)")
-            {
                 SetHindi();
-            }
             if (comboBox1.Text == "Chinese(中文)")
-            {
                 SetChinese();
-            }
             if (comboBox1.Text == "Spanish(Español)")
-            {
                 SetSpanish();
-            }
         }
 
-        private void button15_Click(object sender, EventArgs e) //смена знака
+        private void button15_Click(object sender, EventArgs e) //смена знака +/-
         {
             if (radioButton2.Checked) // для реальных чисел
             {
@@ -542,21 +520,21 @@ namespace Square
             }
         }
 
-        private void textBox2_Click(object sender, EventArgs e)
+        private void textBox2_Click(object sender, EventArgs e) // проверка для корректной работы запятой
         {
             textBox2Clicked = true;
             if (textBox2.Text.Count(x => x == ',') == 0)
                 button13.Enabled = true;
         }
 
-        private void textBox3_Click(object sender, EventArgs e)
+        private void textBox3_Click(object sender, EventArgs e) // проверка для корректной работы запятой
         {
             textBox2Clicked = false;
             if (textBox3.Text.Count(x => x == ',') == 0)
                 button13.Enabled = true;
         }
 
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        private void radioButton5_CheckedChanged(object sender, EventArgs e) // переключение на длинные числа
         {
             label7.Visible = true;
             label7.Text = textForLabel7;
