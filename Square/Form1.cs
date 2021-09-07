@@ -178,12 +178,15 @@ namespace Square
                 // отключение кнопок при нажатии на реал.числа
                 numericUpDown1.Visible = true;
                 label2.Visible = true;
+                label2.Text = "Число знаков после запятой";
                 textBox1.Visible = true;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
                 textBox4.Visible = false;
                 textBox5.Visible = false;
                 textBox6.Visible = false;
+                button13.Enabled = true;
+
 
                 label3.Visible = false;
                 label4.Visible = false;
@@ -218,6 +221,8 @@ namespace Square
                 textBox4.Visible = true;
                 textBox5.Visible = true;
                 textBox6.Visible = false;
+                button13.Enabled = true;
+
 
                 label3.Visible = true;
                 label4.Visible = true;
@@ -371,10 +376,11 @@ namespace Square
             label7.Visible = true;
             label7.Text = "Ввод - вывод";
             label2.Visible = true;
-            numericUpDown1.Visible = true;
+            label2.Text = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
+            numericUpDown1.Visible = false;
             textBox6.Visible = true;
             textBox1.Visible = true;
-
+            button13.Enabled = false;
             label5.Visible = false;
             label6.Visible = false;
             label3.Visible = false;
