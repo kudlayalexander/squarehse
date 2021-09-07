@@ -374,7 +374,7 @@ namespace Square
             this.comboBox1.Items.AddRange(new object[] {
             "Chinese (中文)",
             "English",
-            "Hindi (हिन्दी )",
+            "Hindi (हिन्दी)",
             "Russian (Русский)",
             "Spanish (Español)"});
             this.comboBox1.Location = new System.Drawing.Point(152, 523);

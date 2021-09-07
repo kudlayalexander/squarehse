@@ -25,7 +25,7 @@ namespace Square
         public string textForLabel2 { get; set; }
 
 
-        public void SetRusssian() // Русский язык
+        public void SetRussian()
         {
             isRussian = true;
             isEnglish = false;
@@ -36,6 +36,7 @@ namespace Square
             textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
             textForLabel7 = "Ввод - вывод";
 
+            
             label2.Text = "Число знаков после запятой";
             label1.Text = "Выбор языка (Language)";
             groupBox1.Text = "Тип данных";
@@ -44,17 +45,16 @@ namespace Square
             label5.Text = "Реальная часть";
             label6.Text = "Мнимая часть";
             radioButton5.Text = "Длинные числа";
-            label7.Text = "Результат";
             button1.Text = "О программе";
             button2.Text = "Связаться";
             button22.Text = "Выход";
             groupBox2.Text = "Способ извлечения корня";
             radioButton3.Text = "Арифметический";
             radioButton4.Text = "Аналитический";
-
+            Text = "Извлекатель";
         }
 
-        public void SetEnglish() // Английский
+        public void SetEnglish()
         {
             isRussian = false;
             isEnglish = true;
@@ -62,28 +62,28 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
+            textForLabel2 = "You can enter a number \narbitrary length, \nbut without fractional part";
             textForLabel7 = "Input - output";
 
-            label2.Text = "Число знаков после запятой";
-            label1.Text = "Выбор языка (Language)";
-            groupBox1.Text = "Тип данных";
-            radioButton1.Text = "Комплексные";
-            radioButton2.Text = "Реальные";
-            label5.Text = "Реальная часть";
-            label6.Text = "Мнимая часть";
-            radioButton5.Text = "Длинные числа";
-            label7.Text = "Результат";
-            button1.Text = "О программе";
-            button2.Text = "Связаться";
-            button22.Text = "Выход";
-            groupBox2.Text = "Способ извлечения корня";
-            radioButton3.Text = "Арифметический";
-            radioButton4.Text = "Аналитический";
-
+            label2.Text = "Number of decimal places";
+            label1.Text = "Language selection (Language)";
+            groupBox1.Text = "Data type";
+            radioButton1.Text = "Complex";
+            radioButton2.Text = "Real";
+            label5.Text = "Real part";
+            label6.Text = "Imaginary part";
+            label7.Text = "Result";
+            radioButton5.Text = "Long numbers";
+            button1.Text = "About";
+            button2.Text = "Contact";
+            button22.Text = "Exit";
+            groupBox2.Text = "Root extraction method";
+            radioButton3.Text = "Arithmetic";
+            radioButton4.Text = "Analytical";
+            Text = "Squarer";
         }
 
-        public void SetSpanish() // Испанский
+        public void SetSpanish()
         {
             isRussian = false;
             isEnglish = false;
@@ -91,28 +91,28 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
+            textForLabel2 = "Puede ingresar un número \nlongitud arbitraria, \npero sin parte fraccionaria";
+            textForLabel7 = "Aporte - producción";
 
-            label2.Text = "Число знаков после запятой";
-            label1.Text = "Выбор языка (Language)";
-            groupBox1.Text = "Тип данных";
-            radioButton1.Text = "Комплексные";
-            radioButton2.Text = "Реальные";
-            label5.Text = "Реальная часть";
-            label6.Text = "Мнимая часть";
-            radioButton5.Text = "Длинные числа";
-            label7.Text = "Результат";
-            button1.Text = "О программе";
-            button2.Text = "Связаться";
-            button22.Text = "Выход";
-            groupBox2.Text = "Способ извлечения корня";
-            radioButton3.Text = "Арифметический";
-            radioButton4.Text = "Аналитический";
-
+            label2.Text = "El número de posiciones decimales";
+            label1.Text = "Elegir el idioma (Language)";
+            groupBox1.Text = "Tipo de datos";
+            radioButton1.Text = "Complejos";
+            radioButton2.Text = "Real";
+            label5.Text = "Parte real";
+            label6.Text = "Parte imaginaria";
+            label7.Text = "Resultado";
+            radioButton5.Text = "Números largos";
+            button1.Text = "Sobre el programa";
+            button2.Text = "Сontacto";
+            button22.Text = "Salida";
+            groupBox2.Text = "Método de extracción de raíces";
+            radioButton3.Text = "Aritmético";
+            radioButton4.Text = "Analítico";
+            Text = "Radical";
         }
 
-        public void SetChinese() // Китайский
+        public void SetChinese()
         {
             isRussian = false;
             isEnglish = false;
@@ -120,31 +120,29 @@ namespace Square
             isChinese = true;
             isHindi = false;
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
+            textForLabel2 = "你可以输入一个数字 \n任意长度, \n但没有小数部分";
+            textForLabel7 = "输入 - 输出";
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
 
-            label2.Text = "Число знаков после запятой";
-            label1.Text = "Выбор языка (Language)";
-            groupBox1.Text = "Тип данных";
-            radioButton1.Text = "Комплексные";
-            radioButton2.Text = "Реальные";
-            label5.Text = "Реальная часть";
-            label6.Text = "Мнимая часть";
-            radioButton5.Text = "Длинные числа";
-            label7.Text = "Результат";
-            button1.Text = "О программе";
-            button2.Text = "Связаться";
-            button22.Text = "Выход";
-            groupBox2.Text = "Способ извлечения корня";
-            radioButton3.Text = "Арифметический";
-            radioButton4.Text = "Аналитический";
-
+            label2.Text = "小数位数";
+            label1.Text = "语言选择 (Language)";
+            groupBox1.Text = "数据类型";
+            radioButton1.Text = "复杂的";
+            radioButton2.Text = "真实的";
+            label5.Text = "真实的部分";
+            label6.Text = "虚部";
+            label7.Text = "结果";
+            radioButton5.Text = "长号";
+            button1.Text = "关于节目";
+            button2.Text = "接触";
+            button22.Text = "输出";
+            groupBox2.Text = "根提取法";
+            radioButton3.Text = "算术";
+            radioButton4.Text = "分析的";
+            Text = "激進的";
         }
 
-        public void SetHindi() // Хинди
+        public void SetHindi()
         {
             isRussian = false;
             isEnglish = false;
@@ -152,28 +150,26 @@ namespace Square
             isChinese = false;
             isHindi = true;
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
+            textForLabel2 = "आप एक नंबर दर्ज कर सकते हैं \nमनमानी लंबाई, \nलेकिन भिन्नात्मक भाग के बिना";
+            textForLabel7 = "प्रवेश करना - उत्पादन";
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
 
-            label2.Text = "Число знаков после запятой";
-            label1.Text = "Выбор языка (Language)";
-            groupBox1.Text = "Тип данных";
-            radioButton1.Text = "Комплексные";
-            radioButton2.Text = "Реальные";
-            label5.Text = "Реальная часть";
-            label6.Text = "Мнимая часть";
-            radioButton5.Text = "Длинные числа";
-            label7.Text = "Результат";
-            button1.Text = "О программе";
-            button2.Text = "Связаться";
-            button22.Text = "Выход";
-            groupBox2.Text = "Способ извлечения корня";
-            radioButton3.Text = "Арифметический";
-            radioButton4.Text = "Аналитический";
-
+            label2.Text = "दशमलव स्थानों की संख्या";
+            label1.Text = "भाषा चयन (Language)";
+            groupBox1.Text = "डाटा प्रकार";
+            radioButton1.Text = "जटिल";
+            radioButton2.Text = "असली";
+            label5.Text = "असली हिस्सा";
+            label6.Text = "काल्पनिक भाग";
+            label7.Text = "नतीजा";
+            radioButton5.Text = "लंबी संख्या";
+            button1.Text = "कार्यक्रम के बारे में";
+            button2.Text = "संपर्क";
+            button22.Text = "उत्पादन";
+            groupBox2.Text = "जड़ निष्कर्षण विधि";
+            radioButton3.Text = "अंकगणित";
+            radioButton4.Text = "विश्लेषणात्मक";
+            Text = "मौलिक";
         }
 
 
@@ -192,7 +188,7 @@ namespace Square
         public Form1()
         {
             InitializeComponent();
-            SetRusssian();
+            SetEnglish();
         }
 
 
@@ -332,7 +328,6 @@ namespace Square
                 // отключение кнопок при нажатии на реал.числа
                 numericUpDown1.Visible = true;
                 label2.Visible = true;
-                label2.Text = "Число знаков после запятой";
                 textBox1.Visible = true;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
@@ -383,7 +378,6 @@ namespace Square
                 label5.Visible = true;
                 label6.Visible = true;
                 label7.Visible = true;
-                label7.Text = "результат";
                 label8.Visible = true;
                 label9.Visible = true;
                 islong = false;
@@ -454,24 +448,20 @@ namespace Square
 
         private void button22_Click(object sender, EventArgs e) // Выход из программы
         {
-            DialogResult res = MessageBox.Show("Вы точно хотите выйти из программу ?", "Выход из программы ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (res == DialogResult.Yes)
-            {
                 Application.Exit();
-            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // при выборе языка он меняется
         {
-            if (comboBox1.Text == "Russian(Русский)")
-                SetRusssian();
+            if (comboBox1.Text == "Russian (Русский)")
+                SetRussian();
             if (comboBox1.Text == "English")
                 SetEnglish();
-            if (comboBox1.Text == "Hindi(हिन्दी)")
+            if (comboBox1.Text == "Hindi (हिन्दी)")
                 SetHindi();
-            if (comboBox1.Text == "Chinese(中文)")
+            if (comboBox1.Text == "Chinese (中文)")
                 SetChinese();
-            if (comboBox1.Text == "Spanish(Español)")
+            if (comboBox1.Text == "Spanish (Español)")
                 SetSpanish();
         }
 
