@@ -63,7 +63,7 @@ namespace Square
             isHindi = false;
 
             textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
+            textForLabel7 = "Input - output";
 
             label2.Text = "Число знаков после запятой";
             label1.Text = "Выбор языка (Language)";
