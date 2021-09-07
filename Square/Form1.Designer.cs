@@ -349,7 +349,7 @@ namespace Square
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(6, 42);
+            this.radioButton4.Location = new System.Drawing.Point(7, 44);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(102, 17);
             this.radioButton4.TabIndex = 1;

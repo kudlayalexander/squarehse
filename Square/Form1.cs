@@ -155,7 +155,12 @@ namespace Square
             }
             if (islong)
             {
-                longNumber.number = textBox6.Text;
+                longNumber.strNumber = textBox6.Text;
+                longNumber.SetSqrt();
+                textBox6.Text = longNumber.sqrt;
+                button18.Enabled = false;
+                button15.Enabled = false;
+
             }
 
             button13.Enabled = true; // включает запятую
@@ -173,12 +178,15 @@ namespace Square
                 // отключение кнопок при нажатии на реал.числа
                 numericUpDown1.Visible = true;
                 label2.Visible = true;
+                label2.Text = "Число знаков после запятой";
                 textBox1.Visible = true;
                 textBox2.Visible = false;
                 textBox3.Visible = false;
                 textBox4.Visible = false;
                 textBox5.Visible = false;
                 textBox6.Visible = false;
+                button13.Enabled = true;
+
 
                 label3.Visible = false;
                 label4.Visible = false;
@@ -188,8 +196,15 @@ namespace Square
                 label8.Visible = false;
                 label9.Visible = false;
 
+                islong = false;
                 isreal = true;
                 iscomplex = false;
+
+                button18.Enabled = true;
+                button15.Enabled = true;
+                textBox2.Text = "0";
+                textBox3.Text = "0";
+
             }
         }
 
@@ -206,33 +221,36 @@ namespace Square
                 textBox4.Visible = true;
                 textBox5.Visible = true;
                 textBox6.Visible = false;
+                button13.Enabled = true;
+
 
                 label3.Visible = true;
                 label4.Visible = true;
                 label5.Visible = true;
                 label6.Visible = true;
                 label7.Visible = true;
+                label7.Text = "результат";
                 label8.Visible = true;
                 label9.Visible = true;
+                islong = false;
                 isreal = false;
                 iscomplex = true;
+
+                button18.Enabled = true;
+                button15.Enabled = true;
+                textBox1.Text = "0";
             }
         }
 
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
-            if (radioButton2.Checked)
-            {
+
                 textBox1.Text = "0";
-            }
-            if (radioButton1.Checked)
-            {
                 textBox2.Text = "0";
                 textBox3.Text = "0";
                 textBox4.Text = "0";
                 textBox5.Text = "0";
-
-            }
+                textBox6.Text = "0";
 
             button13.Enabled = true; // включает запятую
             button18.Enabled = true;
@@ -356,21 +374,34 @@ namespace Square
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             label7.Visible = true;
+            label7.Text = "Ввод - вывод";
             label2.Visible = true;
-            numericUpDown1.Visible = true;
+            label2.Text = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
+            numericUpDown1.Visible = false;
             textBox6.Visible = true;
             textBox1.Visible = true;
-
+            button13.Enabled = false;
             label5.Visible = false;
             label6.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             label8.Visible = false;
             label9.Visible = false;
+            textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = false;
             textBox4.Visible = false;
             textBox5.Visible = false;
+
+            islong = true;
+            isreal = false;
+            iscomplex = false;
+
+            button18.Enabled = true;
+            button15.Enabled = true;
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox1.Text = "0";
         }
 
 
