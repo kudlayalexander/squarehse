@@ -158,6 +158,8 @@ namespace Square
                 longNumber.strNumber = textBox6.Text;
                 longNumber.SetSqrt();
                 textBox6.Text = longNumber.sqrt;
+                button18.Enabled = false;
+                button15.Enabled = false;
 
             }
 
@@ -194,6 +196,12 @@ namespace Square
                 islong = false;
                 isreal = true;
                 iscomplex = false;
+
+                button18.Enabled = true;
+                button15.Enabled = true;
+                textBox2.Text = "0";
+                textBox3.Text = "0";
+
             }
         }
 
@@ -216,28 +224,28 @@ namespace Square
                 label5.Visible = true;
                 label6.Visible = true;
                 label7.Visible = true;
+                label7.Text = "результат";
                 label8.Visible = true;
                 label9.Visible = true;
                 islong = false;
                 isreal = false;
                 iscomplex = true;
+
+                button18.Enabled = true;
+                button15.Enabled = true;
+                textBox1.Text = "0";
             }
         }
 
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
-            if (radioButton2.Checked)
-            {
+
                 textBox1.Text = "0";
-            }
-            if (radioButton1.Checked)
-            {
                 textBox2.Text = "0";
                 textBox3.Text = "0";
                 textBox4.Text = "0";
                 textBox5.Text = "0";
-
-            }
+                textBox6.Text = "0";
 
             button13.Enabled = true; // включает запятую
             button18.Enabled = true;
@@ -361,6 +369,7 @@ namespace Square
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             label7.Visible = true;
+            label7.Text = "Ввод - вывод";
             label2.Visible = true;
             numericUpDown1.Visible = true;
             textBox6.Visible = true;
@@ -372,6 +381,7 @@ namespace Square
             label4.Visible = false;
             label8.Visible = false;
             label9.Visible = false;
+            textBox1.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = false;
             textBox4.Visible = false;
@@ -380,6 +390,12 @@ namespace Square
             islong = true;
             isreal = false;
             iscomplex = false;
+
+            button18.Enabled = true;
+            button15.Enabled = true;
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox1.Text = "0";
         }
 
 
