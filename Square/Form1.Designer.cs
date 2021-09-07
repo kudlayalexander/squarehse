@@ -265,7 +265,6 @@ namespace Square
             this.textBox1.Size = new System.Drawing.Size(365, 45);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "0";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox1
             // 
@@ -278,7 +277,6 @@ namespace Square
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Тип данных";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // radioButton5
             // 
