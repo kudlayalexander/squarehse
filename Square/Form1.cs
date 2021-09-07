@@ -155,7 +155,10 @@ namespace Square
             }
             if (islong)
             {
-                longNumber.number = textBox6.Text;
+                longNumber.strNumber = textBox6.Text;
+                longNumber.SetSqrt();
+                textBox6.Text = longNumber.sqrt;
+
             }
 
             button13.Enabled = true; // включает запятую
@@ -188,6 +191,7 @@ namespace Square
                 label8.Visible = false;
                 label9.Visible = false;
 
+                islong = false;
                 isreal = true;
                 iscomplex = false;
             }
@@ -214,6 +218,7 @@ namespace Square
                 label7.Visible = true;
                 label8.Visible = true;
                 label9.Visible = true;
+                islong = false;
                 isreal = false;
                 iscomplex = true;
             }
@@ -371,6 +376,10 @@ namespace Square
             textBox3.Visible = false;
             textBox4.Visible = false;
             textBox5.Visible = false;
+
+            islong = true;
+            isreal = false;
+            iscomplex = false;
         }
 
 
