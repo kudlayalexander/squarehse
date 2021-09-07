@@ -17,7 +17,7 @@ namespace MyLib
         public LongNumbers(string strNumber="0")
         {
             this.strNumber = strNumber;
-            SetSqrt();
+            //SetSqrt();
         }
 
         public void SetSqrt()
@@ -25,6 +25,8 @@ namespace MyLib
             bigNumber = BigInteger.Parse(strNumber);
             sqrt = $"{Math.Pow(Math.E, BigInteger.Log(bigNumber) / 2)}";
         }
+
+
 
     }
 }
