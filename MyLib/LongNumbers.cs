@@ -13,7 +13,7 @@ namespace MyLib
 
         public LongNumbers()
         {
-            this.number = "0";
+            this.number = "0";//проверка
         }
     }
 }
