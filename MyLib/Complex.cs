@@ -70,23 +70,23 @@ namespace MyLib
             switch (quarter)
             {
                 case 1:
-                    if (real == 0) argument = Math.Atan(0);
+                    if (real == 0) argument = Math.PI / 2;
                     else argument = Math.Atan((double)(imaginary / real));
                     break;
 
                 case 2:
-                    if (real == 0) argument = Math.Atan(0);
+                    if (real == 0) argument = Math.PI / 2;
                     else argument = Math.Atan((double)(imaginary / real)) + Math.PI;
                     break;
 
                 case 3:
-                    if (real == 0) argument = Math.Atan(0);
+                    if (real == 0) argument = -(Math.PI / 2);
                     else argument = Math.Atan((double)(imaginary / real)) + Math.PI;
                     break;
 
                 case 4:
-                    if (real == 0) argument = Math.Atan(0);
-                    else argument = Math.Atan((double)(imaginary / real));
+                    if (real == 0) argument = -(Math.PI / 2);
+                    else argument = Math.Atan((double)(imaginary / real)) + 2 * Math.PI;
                     break;
             }
         }

@@ -5,28 +5,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
-
 namespace MyLib
 {
-    public class LongNumbers
+    public static class LongNumbers
     {
-        public string strNumber { get; set; }
-        public BigInteger bigNumber { get; set; }
-        public string sqrt { get; set; }
 
-        public LongNumbers(string strNumber="0")
+        public static string SqrtN(string strNumber) // извлечение корня методом Ньютона
         {
-            this.strNumber = strNumber;
-            //SetSqrt();
-        }
+            BigInteger N = BigInteger.Parse(strNumber);
+            BigInteger rootN = N;
+            int bitLength = 1; // There is a bug in finding bit length hence we start with 1 not 0
+            while (rootN / 2 != 0)
+            {
+                rootN /= 2;
+                bitLength++;
+            }
+            bitLength = (bitLength + 1) / 2;
+            rootN = N >> bitLength;
 
-        public void SetSqrt()
-        {
-            bigNumber = BigInteger.Parse(strNumber);
-            sqrt = $"{Math.Pow(Math.E, BigInteger.Log(bigNumber) / 2)}";
-        }
-
-
+            BigInteger lastRoot = BigInteger.Zero;
+            do
+            {
+                lastRoot = rootN;
+                rootN = (BigInteger.Divide(N, rootN) + rootN) >> 1;
+            }
+            while (!((rootN ^ lastRoot).ToString() == "0"));
+            return $"{rootN}";
+        } // SqRtN
 
     }
 }

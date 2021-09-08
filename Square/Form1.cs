@@ -183,8 +183,6 @@ namespace Square
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
         Complex complex = new Complex();
-        LongNumbers longNumber = new LongNumbers();
-
         public Form1()
         {
             InitializeComponent();
@@ -308,13 +306,9 @@ namespace Square
             }
             if (islong)
             {
-                longNumber.strNumber = textBox6.Text;
-                longNumber.SetSqrt();
-                textBox6.Text = longNumber.sqrt;
                 button18.Enabled = false;
                 button15.Enabled = false;
-
-
+                textBox6.Text = LongNumbers.SqrtN(textBox6.Text);
 
             }
 
