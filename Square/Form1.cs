@@ -21,8 +21,6 @@ namespace Square
         public bool isSpanish { get; set; }
         public bool isChinese { get; set; }
         public bool isHindi { get; set; }
-        public string textForLabel7 { get; set; }
-        public string textForLabel2 { get; set; }
 
 
         public void SetRussian()
@@ -33,10 +31,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
-            textForLabel2 = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
-            textForLabel7 = "Ввод - вывод";
-
-            
+            label10.Text = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
+            label11.Text = "Ввод - вывод";
             label2.Text = "Число знаков после запятой";
             label1.Text = "Выбор языка (Language)";
             groupBox1.Text = "Тип данных";
@@ -48,9 +44,6 @@ namespace Square
             button1.Text = "О программе";
             button2.Text = "Связаться";
             button22.Text = "Выход";
-            groupBox2.Text = "Способ извлечения корня";
-            radioButton3.Text = "Арифметический";
-            radioButton4.Text = "Аналитический";
             Text = "Извлекатель";
         }
 
@@ -61,10 +54,8 @@ namespace Square
             isSpanish = false;
             isChinese = false;
             isHindi = false;
-
-            textForLabel2 = "You can enter a number \narbitrary length, \nbut without fractional part";
-            textForLabel7 = "Input - output";
-
+            label10.Text = "You can enter a number \narbitrary length, \nbut without fractional part";
+            label11.Text = "Input - output";
             label2.Text = "Number of decimal places";
             label1.Text = "Language selection (Language)";
             groupBox1.Text = "Data type";
@@ -77,9 +68,6 @@ namespace Square
             button1.Text = "About";
             button2.Text = "Contact";
             button22.Text = "Exit";
-            groupBox2.Text = "Root extraction method";
-            radioButton3.Text = "Arithmetic";
-            radioButton4.Text = "Analytical";
             Text = "Squarer";
         }
 
@@ -91,9 +79,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
-            textForLabel2 = "Puede ingresar un número \nlongitud arbitraria, \npero sin parte fraccionaria";
-            textForLabel7 = "Aporte - producción";
-
+            label10.Text= "Puede ingresar un número \nlongitud arbitraria, \npero sin parte fraccionaria";
+            label11.Text = "Aporte - producción";
             label2.Text = "El número de posiciones decimales";
             label1.Text = "Elegir el idioma (Language)";
             groupBox1.Text = "Tipo de datos";
@@ -106,9 +93,6 @@ namespace Square
             button1.Text = "Sobre el programa";
             button2.Text = "Сontacto";
             button22.Text = "Salida";
-            groupBox2.Text = "Método de extracción de raíces";
-            radioButton3.Text = "Aritmético";
-            radioButton4.Text = "Analítico";
             Text = "Radical";
         }
 
@@ -120,10 +104,8 @@ namespace Square
             isChinese = true;
             isHindi = false;
 
-            textForLabel2 = "你可以输入一个数字 \n任意长度, \n但没有小数部分";
-            textForLabel7 = "输入 - 输出";
-
-
+            label10.Text = "你可以输入一个数字 \n任意长度, \n但没有小数部分";
+            label11.Text = "输入 - 输出";
             label2.Text = "小数位数";
             label1.Text = "语言选择 (Language)";
             groupBox1.Text = "数据类型";
@@ -136,9 +118,6 @@ namespace Square
             button1.Text = "关于节目";
             button2.Text = "接触";
             button22.Text = "输出";
-            groupBox2.Text = "根提取法";
-            radioButton3.Text = "算术";
-            radioButton4.Text = "分析的";
             Text = "激進的";
         }
 
@@ -150,10 +129,8 @@ namespace Square
             isChinese = false;
             isHindi = true;
 
-            textForLabel2 = "आप एक नंबर दर्ज कर सकते हैं \nमनमानी लंबाई, \nलेकिन भिन्नात्मक भाग के बिना";
-            textForLabel7 = "प्रवेश करना - उत्पादन";
-
-
+            label11.Text = "प्रवेश करना - उत्पादन";
+            label10.Text = "आप एक नंबर दर्ज कर सकते हैं \nमनमानी लंबाई, \nलेकिन भिन्नात्मक भाग के बिना";
             label2.Text = "दशमलव स्थानों की संख्या";
             label1.Text = "भाषा चयन (Language)";
             groupBox1.Text = "डाटा प्रकार";
@@ -166,9 +143,6 @@ namespace Square
             button1.Text = "कार्यक्रम के बारे में";
             button2.Text = "संपर्क";
             button22.Text = "उत्पादन";
-            groupBox2.Text = "जड़ निष्कर्षण विधि";
-            radioButton3.Text = "अंकगणित";
-            radioButton4.Text = "विश्लेषणात्मक";
             Text = "मौलिक";
         }
 
@@ -330,7 +304,6 @@ namespace Square
                 textBox6.Visible = false;
                 button13.Enabled = true;
 
-
                 label3.Visible = false;
                 label4.Visible = false;
                 label5.Visible = false;
@@ -338,6 +311,8 @@ namespace Square
                 label7.Visible = false;
                 label8.Visible = false;
                 label9.Visible = false;
+                label10.Visible = false;
+                label11.Visible = false;
 
                 islong = false;
                 isreal = true;
@@ -364,9 +339,10 @@ namespace Square
                 textBox4.Visible = true;
                 textBox5.Visible = true;
                 textBox6.Visible = false;
+                label10.Visible = false;
+                label11.Visible = false;
+
                 button13.Enabled = true;
-
-
                 label3.Visible = true;
                 label4.Visible = true;
                 label5.Visible = true;
@@ -399,18 +375,6 @@ namespace Square
             button15.Enabled = true;
 
 
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e) // Способо извл. корня:  Аналитический
-        {
-            simple = false;
-            analit = true;
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e) // Способ извл. корня:  Обычный
-        {
-            simple = true;
-            analit = false;
         }
 
         private void button13_Click(object sender, EventArgs e) // Ввод запятой
@@ -520,10 +484,10 @@ namespace Square
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e) // переключение на длинные числа
         {
-            label7.Visible = true;
-            label7.Text = textForLabel7;
-            label2.Visible = true;
-            label2.Text = textForLabel2;
+            label10.Visible = true;
+            label11.Visible = true;
+            label7.Visible = false;
+            label2.Visible = false;
             numericUpDown1.Visible = false;
             textBox6.Visible = true;
             textBox1.Visible = true;
@@ -550,7 +514,5 @@ namespace Square
             textBox3.Text = "0";
             textBox1.Text = "0";
         }
-
-
     }
 }
