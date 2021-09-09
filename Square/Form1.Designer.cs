@@ -502,6 +502,7 @@ namespace Square
             this.textBox6.Size = new System.Drawing.Size(318, 292);
             this.textBox6.TabIndex = 44;
             this.textBox6.Visible = false;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label10
             // 

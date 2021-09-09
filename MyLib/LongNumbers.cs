@@ -9,29 +9,30 @@ namespace MyLib
 {
     public static class LongNumbers
     {
-
-        public static string SqrtN(string strNumber) // извлечение корня методом Ньютона
+        public static string Sqrt(string strNumber)
         {
-            BigInteger N = BigInteger.Parse(strNumber);
-            BigInteger rootN = N;
-            int bitLength = 1; // There is a bug in finding bit length hence we start with 1 not 0
-            while (rootN / 2 != 0)
+            BigInteger a = BigInteger.Parse(strNumber);
+            BigInteger b1 = 1; BigInteger b2 = 0; BigInteger b3 = 0;
+            if (a == 0)
             {
-                rootN /= 2;
-                bitLength++;
+                return "0";
             }
-            bitLength = (bitLength + 1) / 2;
-            rootN = N >> bitLength;
 
-            BigInteger lastRoot = BigInteger.Zero;
-            do
+            if (a == 3)
             {
-                lastRoot = rootN;
-                rootN = (BigInteger.Divide(N, rootN) + rootN) >> 1;
+                return "1";
             }
-            while (!((rootN ^ lastRoot).ToString() == "0"));
-            return $"{rootN}";
-        } // SqRtN
 
+            else
+            {
+                while ((b3 - b1 > (BigInteger)0.000001) || (b3 - b1 < -(BigInteger)0.000001))
+                {
+                    b2 = (BigInteger)((b1 + a / b1) / 2);
+                    b3 = b1;
+                    b1 = b2;
+                }
+                return $"{b1}";
+            }
+        }
     }
 }

@@ -184,19 +184,12 @@ namespace Square
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
             Button buttonNumber = (Button)sender;
-            if (radioButton2.Checked)
+            if (radioButton2.Checked && textBox1.TextLength < 20)
             {
-                if (textBox1.TextLength<40)
-                {
-                    if (textBox1.Text == "0")
-                        textBox1.Text = buttonNumber.Text;
-                    else
-                        textBox1.Text = textBox1.Text + buttonNumber.Text;
-                }
+                if (textBox1.Text == "0")
+                    textBox1.Text = buttonNumber.Text;
                 else
-                {
-                    textBox1.Text = textBox1.Text;
-                }
+                    textBox1.Text = textBox1.Text + buttonNumber.Text;
             }
 
             if (textBox2Clicked == true)  // ввод при клике пользователя 
@@ -214,7 +207,7 @@ namespace Square
                     textBox3.Text = textBox3.Text + buttonNumber.Text;
             }
 
-            if (radioButton5.Checked)
+            if (radioButton5.Checked && textBox6.Text.Length < 500)
             {
                 if (textBox6.Text == "0")
                     textBox6.Text = buttonNumber.Text;
@@ -223,49 +216,36 @@ namespace Square
             }
         }
 
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!ModifierKeys.HasFlag(Keys.Shift) && e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57) && textBox6.Text.Length < 10)
+                e.Handled = true;
+        }
+
+
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
             if (isreal)
             {
-                if (simple)
+                if (sqrt.positive)
                 {
-                    if (sqrt.positive)
-                    {
-                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
-                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
-                        textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
-                    }
-                    else
-                    {
-                        sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
-                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
-                        textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
-                        sqrt.positive = true;
-                        button18.Enabled = false;
-                        button15.Enabled = false;
-                    }
+                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                    textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
                 }
-                if (analit)
+                else
                 {
-                    if (sqrt.positive)
-                    {
-                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
-
-                        sqrt.analitSqrt = sqrt.GetAnalitSqrt();
-                        textBox1.Text = $"{sqrt.analitSqrt}";
-                    }
-                    else
-                    {
-                        sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
-                        sqrt.analitSqrt = sqrt.GetAnalitSqrt();
-                        textBox1.Text = $"±{sqrt.analitSqrt}i";
-                        sqrt.positive = true;
-                        button18.Enabled = false;
-                        button15.Enabled = false;
-                    }
+                    sqrt.number = double.Parse(textBox1.Text.Replace("-", ""));// приводим строку, которая в дисплее в тип double и удаляем -
+                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt(); // в поле результата обычного корня присваиваем значение метода
+                    textBox1.Text = $"±{sqrt.doubleSqrt}i"; // вывод значения на экран
+                    sqrt.positive = true;
+                    button18.Enabled = false;
+                    button15.Enabled = false;
                 }
             }
+
             if (iscomplex)
             {
                 complex.real = double.Parse(textBox2.Text);
@@ -274,16 +254,10 @@ namespace Square
                 textBox4.Text = complex.sqrtTrig1;
                 textBox5.Text = complex.sqrtTrig2;
 
-
-
-
             }
             if (islong)
-            {
-                button18.Enabled = false;
-                button15.Enabled = false;
-                textBox6.Text = LongNumbers.SqrtN(textBox6.Text);
-
+            { 
+                textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
             }
 
             button13.Enabled = true; // включает запятую
@@ -303,6 +277,7 @@ namespace Square
                 textBox5.Visible = false;
                 textBox6.Visible = false;
                 button13.Enabled = true;
+                textBox6.Text = "0";
 
                 label3.Visible = false;
                 label4.Visible = false;
@@ -341,6 +316,7 @@ namespace Square
                 textBox6.Visible = false;
                 label10.Visible = false;
                 label11.Visible = false;
+                textBox6.Text = "0";
 
                 button13.Enabled = true;
                 label3.Visible = true;
@@ -513,6 +489,7 @@ namespace Square
             textBox2.Text = "0";
             textBox3.Text = "0";
             textBox1.Text = "0";
+            textBox6.Text = "0";
         }
     }
 }
