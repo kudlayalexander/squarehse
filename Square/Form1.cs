@@ -219,8 +219,7 @@ namespace Square
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!ModifierKeys.HasFlag(Keys.Shift) && e.KeyChar != 8 && (e.KeyChar < 48 || e.KeyChar > 57) && textBox6.Text.Length < 10)
-                e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
         }
 
 
@@ -491,5 +490,6 @@ namespace Square
             textBox1.Text = "0";
             textBox6.Text = "0";
         }
+
     }
 }
