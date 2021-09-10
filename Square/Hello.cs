@@ -14,13 +14,20 @@ namespace Square
     {
         public Hello()
         {
+
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Guide nextForm = new Guide();
+            Hello.ActiveForm.Visible = false;
             nextForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
