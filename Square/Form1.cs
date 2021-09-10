@@ -229,13 +229,9 @@ namespace Square
             }
         }
 
-
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
-        }
-
-
+        string incorrectInput = "";
+        string incorrectCaption = "";
+        bool correctInput = true;
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
@@ -267,9 +263,29 @@ namespace Square
                 textBox5.Text = complex.sqrtTrig2;
 
             }
-            if (islong)
-            { 
-                textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+            if (islong) 
+            {
+                // проверка введенных значений
+                for (int i = 0; i < textBox6.Text.Length; i++) 
+                {
+                    if ( i == 0 && (Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-'))
+                        correctInput = true;
+                    else
+                        correctInput = false;
+                    if ( i>0 && Char.IsDigit(textBox6.Text[i]))
+                        correctInput = true;
+                    else
+                        correctInput = false;
+                }
+                if (correctInput)
+                {
+                    textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+                }
+                else
+                {
+                    MessageBox.Show(incorrectInput , incorrectCaption,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+                
             }
 
             button13.Enabled = true; // включает запятую
@@ -504,5 +520,11 @@ namespace Square
             textBox6.Text = "0";
         }
 
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
+            }
+        }
     }
 }
