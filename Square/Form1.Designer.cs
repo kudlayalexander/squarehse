@@ -314,12 +314,13 @@ namespace Square
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(673, 500);
+            this.button22.BackColor = System.Drawing.Color.Red;
+            this.button22.Location = new System.Drawing.Point(673, 9);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(99, 49);
             this.button22.TabIndex = 27;
             this.button22.Text = "Выход";
-            this.button22.UseVisualStyleBackColor = true;
+            this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button1
@@ -531,6 +532,7 @@ namespace Square
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox6);
@@ -569,7 +571,9 @@ namespace Square
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Извлекатель";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
