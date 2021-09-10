@@ -86,7 +86,7 @@ namespace Square
 
             incorrectInput = "Entrada incorrecta";
             incorrectCaption = "Error";
-            label10.Text = "Puede ingresar un número \ncon una longitud de <1500 caracteres, \nsin la parte fraccionaria";
+            label10.Text= "Puede ingresar un número \ncon una longitud de <1500 caracteres, \nsin la parte fraccionaria";
             label11.Text = "Aporte - producción";
             label2.Text = "El número de posiciones decimales";
             label1.Text = "Elegir el idioma (Language)";
