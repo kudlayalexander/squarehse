@@ -31,6 +31,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
+            incorrectInput = "Неверный ввод";
+            incorrectCaption = "Ошибка";
             label10.Text = "Вы можете ввести число \nдлиной < 1500 символов, \nбез дробной части";
             label11.Text = "Ввод - вывод";
             label7.Text = "Результат";
@@ -55,6 +57,9 @@ namespace Square
             isSpanish = false;
             isChinese = false;
             isHindi = false;
+
+            incorrectInput = "Incorrect input";
+            incorrectCaption = "Error";
             label10.Text = "You can enter a number \nwith a length of <1500 characters, \nwithout the fractional part";
             label11.Text = "Input - output";
             label2.Text = "Number of decimal places";
@@ -80,6 +85,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
+            incorrectInput = "Entrada incorrecta";
+            incorrectCaption = "Error";
             label10.Text= "Puede ingresar un número \ncon una longitud de <1500 caracteres, \nsin la parte fraccionaria";
             label11.Text = "Aporte - producción";
             label2.Text = "El número de posiciones decimales";
@@ -105,6 +112,8 @@ namespace Square
             isChinese = true;
             isHindi = false;
 
+            incorrectInput = "输入不正确";
+            incorrectCaption = "错误";
             label10.Text = "您可以輸入長度小於 1500 \n個字符的數字，\n不含小數部分";
             label11.Text = "输入 - 输出";
             label2.Text = "小数位数";
@@ -130,6 +139,8 @@ namespace Square
             isChinese = false;
             isHindi = true;
 
+            incorrectInput = "गलत इनपुट";
+            incorrectCaption = "गलती";
             label11.Text = "प्रवेश करना - उत्पादन";
             label10.Text = "आप भिन्नात्मक भाग के \nबिना <1500 वर्णों की लंबाई \nवाली संख्या दर्ज कर सकते हैं";
             label2.Text = "दशमलव स्थानों की संख्या";
