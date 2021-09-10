@@ -31,6 +31,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
+            incorrectInput = "Неверный ввод";
+            incorrectCaption = "Ошибка";
             label10.Text = "Вы можете ввести число \nпроизвольной длины, \nно без дробной части";
             label11.Text = "Ввод - вывод";
             label2.Text = "Число знаков после запятой";
@@ -54,6 +56,9 @@ namespace Square
             isSpanish = false;
             isChinese = false;
             isHindi = false;
+
+            incorrectInput = "Incorrect input";
+            incorrectCaption = "Error";
             label10.Text = "You can enter a number \narbitrary length, \nbut without fractional part";
             label11.Text = "Input - output";
             label2.Text = "Number of decimal places";
@@ -79,6 +84,8 @@ namespace Square
             isChinese = false;
             isHindi = false;
 
+            incorrectInput = "Entrada incorrecta";
+            incorrectCaption = "Error";
             label10.Text= "Puede ingresar un número \nlongitud arbitraria, \npero sin parte fraccionaria";
             label11.Text = "Aporte - producción";
             label2.Text = "El número de posiciones decimales";
@@ -104,6 +111,8 @@ namespace Square
             isChinese = true;
             isHindi = false;
 
+            incorrectInput = "输入不正确";
+            incorrectCaption = "错误";
             label10.Text = "你可以输入一个数字 \n任意长度, \n但没有小数部分";
             label11.Text = "输入 - 输出";
             label2.Text = "小数位数";
@@ -129,6 +138,8 @@ namespace Square
             isChinese = false;
             isHindi = true;
 
+            incorrectInput = "गलत इनपुट";
+            incorrectCaption = "गलती";
             label11.Text = "प्रवेश करना - उत्पादन";
             label10.Text = "आप एक नंबर दर्ज कर सकते हैं \nमनमानी लंबाई, \nलेकिन भिन्नात्मक भाग के बिना";
             label2.Text = "दशमलव स्थानों की संख्या";
@@ -216,13 +227,9 @@ namespace Square
             }
         }
 
-
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
-        }
-
-
+        string incorrectInput = "";
+        string incorrectCaption = "";
+        bool correctInput = true;
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
@@ -254,9 +261,29 @@ namespace Square
                 textBox5.Text = complex.sqrtTrig2;
 
             }
-            if (islong)
-            { 
-                textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+            if (islong) 
+            {
+                // проверка введенных значений
+                for (int i = 0; i < textBox6.Text.Length; i++) 
+                {
+                    if ( i == 0 && (Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-'))
+                        correctInput = true;
+                    else
+                        correctInput = false;
+                    if ( i>0 && Char.IsDigit(textBox6.Text[i]))
+                        correctInput = true;
+                    else
+                        correctInput = false;
+                }
+                if (correctInput)
+                {
+                    textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+                }
+                else
+                {
+                    MessageBox.Show(incorrectInput , incorrectCaption,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+                
             }
 
             button13.Enabled = true; // включает запятую
@@ -491,5 +518,11 @@ namespace Square
             textBox6.Text = "0";
         }
 
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
+            }
+        }
     }
 }
