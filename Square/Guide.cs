@@ -34,6 +34,7 @@ namespace Square
             label7.Text = "Все кнопки выполняют тот же функционал.\nВ этом разделе вы можете вводить число с клавиатуры.";
 
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)
