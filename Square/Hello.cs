@@ -85,7 +85,7 @@ namespace Square
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GuideRus nextForm = new GuideRus();
+            Guide nextForm = new Guide();
             Hello.ActiveForm.Visible = false;
             nextForm.Show();
         }
