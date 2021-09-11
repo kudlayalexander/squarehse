@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace Square
 {
-    public partial class Guide : Form
+    public partial class GuideRus : Form
     {
-        public Guide()
+        public GuideRus()
         {
 
             InitializeComponent();
+
+            label1.Text = "Пропустить обучение";
+            button1.Text = "К программе";
+            button22.Text = "Выход";
+
             label3.Text = "(1.) Тип данных: 'Реальные' позволяет вачислить корень из числа(положительного \nили отрицательного), имеющего 20 разрдов, с точность знаков после запятой равной 0 - 15.\n\n" +
                 "(2.)(3.) Выберите тип данных:'Комплексные' или тип данных:'Длинные числа', чтобы \nиспользовать измененный функионал программы.\n\n" +
                 "(4.) Добавит или удалит знак минус перед введенным числом. Чтобы после извлечение корня из \nотрицательного числа вернутья к вводу чисел нажмите кнопку (5.).\n\n" +
@@ -39,7 +44,7 @@ namespace Square
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 nextForm = new Form1();
-            Guide.ActiveForm.Visible = false;
+            GuideRus.ActiveForm.Visible = false;
             nextForm.Show();
         }
 

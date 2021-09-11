@@ -53,11 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guide.cs">
+    <Compile Include="GuideRus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guide.Designer.cs">
-      <DependentUpon>Guide.cs</DependentUpon>
+    <Compile Include="GuideRus.Designer.cs">
+      <DependentUpon>GuideRus.cs</DependentUpon>
     </Compile>
     <Compile Include="Hello.cs">
       <SubType>Form</SubType>
@@ -70,8 +70,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guide.resx">
-      <DependentUpon>Guide.cs</DependentUpon>
+    <EmbeddedResource Include="GuideRus.resx">
+      <DependentUpon>GuideRus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hello.resx">
       <DependentUpon>Hello.cs</DependentUpon>
