@@ -163,6 +163,12 @@ namespace Square
         public bool islong = false;
         public bool textBox2Clicked = true;
 
+
+        // объявление переменных для корректной работы вывода длинных чисел
+        string incorrectInput = "Incorrect input";
+        string incorrectCaption = "Error";
+        bool correctInput = true;
+
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
         Complex complex = new Complex();
@@ -231,9 +237,6 @@ namespace Square
             }
         }
 
-        string incorrectInput = "";
-        string incorrectCaption = "";
-        bool correctInput = true;
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
@@ -268,15 +271,12 @@ namespace Square
             if (islong) 
             {
                 // проверка введенных значений
+                correctInput = true;
                 for (int i = 0; i < textBox6.Text.Length; i++) 
                 {
-                    if ( i == 0 && (Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-'))
-                        correctInput = true;
-                    else
+                    if (i == 0 && !(Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] != '-'))
                         correctInput = false;
-                    if ( i>0 && Char.IsDigit(textBox6.Text[i]))
-                        correctInput = true;
-                    else
+                    if (i>0 && !Char.IsDigit(textBox6.Text[i]))
                         correctInput = false;
                 }
                 if (correctInput)
