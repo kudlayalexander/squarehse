@@ -1,7 +1,7 @@
 ﻿
 namespace Square
 {
-    partial class Guide
+    partial class GuideRus
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Square
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guide));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuideRus));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
