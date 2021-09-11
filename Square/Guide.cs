@@ -179,6 +179,5 @@ namespace Square
         {
             Application.Exit();
         }
-
     }
 }

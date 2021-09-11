@@ -23,6 +23,7 @@ namespace Square
             Language.Chi = false;
             Language.Hin = false;
 
+            comboBox1.Text = "Russian (Русский)";
             incorrectInput = "Неверный ввод";
             incorrectCaption = "Ошибка";
             label10.Text = "Вы можете ввести число \nдлиной < 1500 символов, \nбез дробной части";
@@ -50,6 +51,7 @@ namespace Square
             Language.Chi = false;
             Language.Hin = false;
 
+            comboBox1.Text = "English";
             incorrectInput = "Incorrect input";
             incorrectCaption = "Error";
             label10.Text = "You can enter a number \nwith a length of <1500 characters, \nwithout the fractional part";
@@ -77,6 +79,7 @@ namespace Square
             Language.Chi = false;
             Language.Hin = false;
 
+            comboBox1.Text = "Spanish (Español)";
             incorrectInput = "Entrada incorrecta";
             incorrectCaption = "Error";
             label10.Text= "Puede ingresar un número \ncon una longitud de <1500 caracteres, \nsin la parte fraccionaria";
@@ -104,6 +107,7 @@ namespace Square
             Language.Chi = true;
             Language.Hin = false;
 
+            comboBox1.Text = "Chinese (中文)";
             incorrectInput = "输入不正确";
             incorrectCaption = "错误";
             label10.Text = "您可以輸入長度小於 1500 \n個字符的數字，\n不含小數部分";
@@ -131,6 +135,7 @@ namespace Square
             Language.Chi = false;
             Language.Hin = true;
 
+            comboBox1.Text = "Hindi (हिन्दी)";
             incorrectInput = "गलत इनपुट";
             incorrectCaption = "गलती";
             label11.Text = "प्रवेश करना - उत्पादन";
@@ -364,12 +369,12 @@ namespace Square
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
 
-                textBox1.Text = "0";
-                textBox2.Text = "0";
-                textBox3.Text = "0";
-                textBox4.Text = "0";
-                textBox5.Text = "0";
-                textBox6.Text = "0";
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            textBox3.Text = "0";
+            textBox4.Text = "0";
+            textBox5.Text = "0";
+            textBox6.Text = "0";
 
             button13.Enabled = true; // включает запятую
             button18.Enabled = true;
