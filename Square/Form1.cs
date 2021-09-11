@@ -15,21 +15,13 @@ namespace Square
 
     public partial class Form1 : Form
     {
-
-        public bool isRussian { get; set; }
-        public bool isEnglish { get; set; }
-        public bool isSpanish { get; set; }
-        public bool isChinese { get; set; }
-        public bool isHindi { get; set; }
-
-
         public void SetRussian()
         {
-            isRussian = true;
-            isEnglish = false;
-            isSpanish = false;
-            isChinese = false;
-            isHindi = false;
+            Language.Rus = true;
+            Language.Eng = false;
+            Language.Sp = false;
+            Language.Chi = false;
+            Language.Hin = false;
 
             incorrectInput = "Неверный ввод";
             incorrectCaption = "Ошибка";
@@ -52,11 +44,11 @@ namespace Square
 
         public void SetEnglish()
         {
-            isRussian = false;
-            isEnglish = true;
-            isSpanish = false;
-            isChinese = false;
-            isHindi = false;
+            Language.Rus = false;
+            Language.Eng = true;
+            Language.Sp = false;
+            Language.Chi = false;
+            Language.Hin = false;
 
             incorrectInput = "Incorrect input";
             incorrectCaption = "Error";
@@ -79,11 +71,11 @@ namespace Square
 
         public void SetSpanish()
         {
-            isRussian = false;
-            isEnglish = false;
-            isSpanish = true;
-            isChinese = false;
-            isHindi = false;
+            Language.Rus = false;
+            Language.Eng = false;
+            Language.Sp = true;
+            Language.Chi = false;
+            Language.Hin = false;
 
             incorrectInput = "Entrada incorrecta";
             incorrectCaption = "Error";
@@ -106,11 +98,11 @@ namespace Square
 
         public void SetChinese()
         {
-            isRussian = false;
-            isEnglish = false;
-            isSpanish = false;
-            isChinese = true;
-            isHindi = false;
+            Language.Rus = false;
+            Language.Eng = false;
+            Language.Sp = false;
+            Language.Chi = true;
+            Language.Hin = false;
 
             incorrectInput = "输入不正确";
             incorrectCaption = "错误";
@@ -133,11 +125,11 @@ namespace Square
 
         public void SetHindi()
         {
-            isRussian = false;
-            isEnglish = false;
-            isSpanish = false;
-            isChinese = false;
-            isHindi = true;
+            Language.Rus = false;
+            Language.Eng = false;
+            Language.Sp = false;
+            Language.Chi = false;
+            Language.Hin = true;
 
             incorrectInput = "गलत इनपुट";
             incorrectCaption = "गलती";
@@ -169,11 +161,16 @@ namespace Square
         public double value { get; set; } // создание поля которое может хранить значение
         Sqrt sqrt = new Sqrt(); // создание экземпляра класса Sqrt
         Complex complex = new Complex();
+
         public Form1()
         {
             
             InitializeComponent();
-            SetEnglish();
+            if (Language.Eng) SetEnglish();
+            if (Language.Chi) SetChinese();
+            if (Language.Sp) SetSpanish();
+            if (Language.Rus) SetRussian();
+            if (Language.Hin) SetHindi();
         }
 
 
