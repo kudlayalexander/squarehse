@@ -199,7 +199,7 @@ namespace Square
         
         private void button2_Click(object sender, EventArgs e) // Кнопка "Связь"
         {
-
+            MessageBox.Show("kudlay2014@yandex.ru \nVitaliyTyu@yandex.ru");
         }
 
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры

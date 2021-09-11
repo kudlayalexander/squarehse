@@ -76,6 +76,7 @@ namespace Square
         public Hello()
         {
             InitializeComponent();
+            SetEnglish();
             if (Language.Eng) SetEnglish();
             if (Language.Chi) SetChinese();
             if (Language.Sp) SetSpanish();
