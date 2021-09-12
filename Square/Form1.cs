@@ -272,21 +272,47 @@ namespace Square
             {
                 // проверка введенных значений
                 correctInput = true;
-                for (int i = 0; i < textBox6.Text.Length; i++) 
+                for (int i = 0; i < textBox6.Text.Length; i++)
                 {
                     if (i == 0 && !(Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] != '-'))
                         correctInput = false;
-                    if (i>0 && !Char.IsDigit(textBox6.Text[i]))
+
+                    if (i > 0 && !Char.IsDigit(textBox6.Text[i]))
+                        correctInput = false;
+
+                    if (textBox6.Text.Length >= 1500)
                         correctInput = false;
                 }
-                if (correctInput)
+
+                if (LongNumbers.positive)
                 {
-                    textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+
+                    if (correctInput)
+                    {
+                        textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(incorrectInput , incorrectCaption,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    if (correctInput)
+                    {
+                        textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+                        textBox1.Text = $"±{LongNumbers.Sqrt(textBox6.Text.Replace("-", ""))}i"; // вывод значения на экран
+                        LongNumbers.positive = true;
+                        button18.Enabled = false;
+                        button15.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
+
+
                 
             }
 
@@ -447,7 +473,8 @@ namespace Square
                     }
                 }
             }
-            else if (radioButton1.Checked) // для комплексных чисел
+
+            if (radioButton1.Checked) // для комплексных чисел
             {
                 if (textBox2Clicked && textBox2.Text != "0") // реальная часть, смена знака
                 {
@@ -469,6 +496,24 @@ namespace Square
                     else
                     {
                         textBox3.Text = textBox3.Text.Replace("-", "");
+                    }
+                }
+            }
+
+            if (radioButton5.Checked)
+            {
+                if (textBox1.Text != "0")
+                {
+                    if (sqrt.positive)
+                    {
+                        textBox1.Text = "-" + textBox1.Text;
+                        LongNumbers.positive = false;
+                    }
+                    else
+                    {
+                        textBox1.Text = textBox1.Text.Replace("-", "");
+                        LongNumbers.positive = true;
+
                     }
                 }
             }
@@ -527,6 +572,13 @@ namespace Square
             {
                 if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Guide nextForm = new Guide();
+            Form1.ActiveForm.Visible = false;
+            nextForm.Show();
         }
     }
 }
