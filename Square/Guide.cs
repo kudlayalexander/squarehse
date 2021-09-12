@@ -20,7 +20,6 @@ namespace Square
             pictureBox3.Image = Properties.Resources.LongRUS;
 
 
-            label1.Text = "Пропустить обучение";
             button1.Text = "К программе";
             button22.Text = "Выход";
 
@@ -48,7 +47,6 @@ namespace Square
             pictureBox3.Image = Properties.Resources.LongENG;
 
 
-            label1.Text = "Skip tutorial";
             button1.Text = "To programm";
             button22.Text = "Exit";
 
@@ -77,7 +75,6 @@ namespace Square
             pictureBox3.Image = Properties.Resources.LongCHN;
 
 
-            label1.Text = "跳过训练";
             button1.Text = "到程序";
             button22.Text = "退出";
 
@@ -105,7 +102,6 @@ namespace Square
             pictureBox3.Image = Properties.Resources.LongHINDI;
 
 
-            label1.Text = "प्रशिक्षण छोड़ें";
             button1.Text = "कार्यक्रम के लिए";
             button22.Text = "बाहर निकलें";
 
@@ -133,7 +129,6 @@ namespace Square
             pictureBox3.Image = Properties.Resources.LongSPN;
 
 
-            label1.Text = "Omitir entrenamiento";
             button1.Text = "Al programa";
             button22.Text = "Salida";
 
@@ -179,5 +174,6 @@ namespace Square
         {
             Application.Exit();
         }
+
     }
 }

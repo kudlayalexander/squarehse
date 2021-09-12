@@ -9,6 +9,7 @@ namespace MyLib
 {
     public static class LongNumbers
     {
+        public static bool positive = true;
         public static string Sqrt(string strNumber)
         {
             BigInteger a = BigInteger.Parse(strNumber);
