@@ -274,10 +274,10 @@ namespace Square
                 correctInput = true;
                 for (int i = 0; i < textBox6.Text.Length; i++)
                 {
-                    if (i == 0 && !(Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] != '-'))
+                    if (i == 0 && !(Char.IsDigit(textBox6.Text[i])) && textBox6.Text[i] != '-')
                         correctInput = false;
 
-                    if (i > 0 && !Char.IsDigit(textBox6.Text[i]))
+                    if (i > 0 && (!Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-'))
                         correctInput = false;
 
                     if (textBox6.Text.Length >= 1500)
@@ -300,8 +300,7 @@ namespace Square
                 {
                     if (correctInput)
                     {
-                        textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
-                        textBox1.Text = $"±{LongNumbers.Sqrt(textBox6.Text.Replace("-", ""))}i"; // вывод значения на экран
+                        textBox6.Text = $"±{LongNumbers.Sqrt(textBox6.Text.Replace("-", ""))}i"; // вывод значения на экран
                         LongNumbers.positive = true;
                         button18.Enabled = false;
                         button15.Enabled = false;
@@ -500,18 +499,18 @@ namespace Square
                 }
             }
 
-            if (radioButton5.Checked)
+            if (radioButton5.Checked) 
             {
-                if (textBox1.Text != "0")
+                if (textBox6.Text != "0")
                 {
-                    if (sqrt.positive)
+                    if (LongNumbers.positive)
                     {
-                        textBox1.Text = "-" + textBox1.Text;
+                        textBox6.Text = "-" + textBox6.Text;
                         LongNumbers.positive = false;
                     }
                     else
                     {
-                        textBox1.Text = textBox1.Text.Replace("-", "");
+                        textBox6.Text = textBox6.Text.Replace("-", "");
                         LongNumbers.positive = true;
 
                     }
@@ -567,10 +566,10 @@ namespace Square
             textBox6.Text = "0";
         }
 
-        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e) // ограничение на ввод в длинных числах
         {
             {
-                if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != 45) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
+                if (!(Char.IsDigit(e.KeyChar)) && (e.KeyChar != (char)Keys.Back)) e.Handled = true;
             }
         }
 
