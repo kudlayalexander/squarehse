@@ -22,7 +22,7 @@ namespace MyLib
 
 
 
-
+        //конструктор
         public Complex(double real=0, double imaginary=0)
         {
             this.real = real;
@@ -37,12 +37,13 @@ namespace MyLib
 
         }
 
-        /// calculate module
+        // вычисление модуля
         public void SetModule()
         {
             module = Math.Sqrt(Math.Pow(real, 2) + Math.Pow(imaginary, 2));
         }
 
+        // определение четверти
         public void SetQuarter()
         {
             if (realPositive && imaginaryPositive)
@@ -63,6 +64,7 @@ namespace MyLib
             }
         }
 
+        // нахождение аргумента
         public void SetArgument()
         {
 
@@ -91,6 +93,7 @@ namespace MyLib
                     break;
             }
         }
+        // вычисление корня
         public void CalculateSqrt()
         {
             double re1 = Math.Cos((double)((argument + 2 * Math.PI * 0) / 2)) * Math.Sqrt(module);
@@ -104,6 +107,7 @@ namespace MyLib
             else sqrtTrig2 = $"{re2}  " + $"{im2}"[0] + $"  {im2}".Replace("-", "") + "i";
         }
 
+        // проделать весь процесс вычислений
         public void WholeProcess()
         {
             realPositive = real >= 0;
