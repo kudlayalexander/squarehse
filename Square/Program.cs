@@ -11,6 +11,10 @@ namespace Square
     {
 
         [STAThread]
+        /*!
+         launch first window
+         */
+        /// test
         static void Main()
         {
             Application.EnableVisualStyles();
