@@ -33,7 +33,7 @@ namespace MyLib
             return (double)(1 / 2) * (n + (double)(a / n));
         }
 
-        public double GetAnalitSqrt() // возвращает значение анал корня
+        public double GetAnalitSqrt() // возвращает значение аналит. корня
         {
             double n = 1;
             double result = 0;
