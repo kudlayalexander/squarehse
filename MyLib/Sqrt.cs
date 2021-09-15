@@ -25,20 +25,5 @@ namespace MyLib
             double result =  Math.Sqrt(number);
             return Math.Round(result, (int)iter);
         }
-
-
-        public double GetAnalitSqrt() // возвращает значение аналит. корня
-        {
-            double n = 1;
-            double result = 0;
-                for (int i = 0; i <= iter; i++)
-                {
-                    result = AnalitFunc(n, number);
-                    n = result;
-                }
-            return result;
-        }
-        // new 
-
     }
 }

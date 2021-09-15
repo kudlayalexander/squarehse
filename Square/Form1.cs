@@ -238,9 +238,21 @@ namespace Square
             {
                 if (sqrt.positive)
                 {
-                    sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
-                    sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
-                    textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+                    if (double.Parse(textBox1.Text) > 0)
+                    {
+                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                        textBox1.Text = $"±{sqrt.doubleSqrt}";// вывод значения на экран
+                        button18.Enabled = false;
+                        button15.Enabled = false;
+                    }
+                    else
+                    {
+                        sqrt.number = double.Parse(textBox1.Text);// приводим строку, которая в дисплее в тип double
+                        sqrt.doubleSqrt = sqrt.GetDoubleSqrt();// в поле результата обычного корня присваиваем значение метода
+                        textBox1.Text = $"{sqrt.doubleSqrt}";// вывод значения на экран
+                    }
+                   
                 }
                 else
                 {
@@ -251,6 +263,7 @@ namespace Square
                     button18.Enabled = false;
                     button15.Enabled = false;
                 }
+                button13.Enabled = true; // включает запятую
             }
 
             if (iscomplex) // результат корня из комплексных чисел
@@ -260,6 +273,10 @@ namespace Square
                 complex.WholeProcess();
                 textBox4.Text = complex.sqrtTrig1;
                 textBox5.Text = complex.sqrtTrig2;
+                if (textBox2.Text.Count(x => x == ',') == 0)
+                    button13.Enabled = true;
+                if (textBox3.Text.Count(x => x == ',') == 0)
+                    button13.Enabled = true;
 
             }
             if (islong) // результат корня из длинных чисел
@@ -280,10 +297,16 @@ namespace Square
 
                 if (LongNumbers.positive) // корень из положительных длинных чисел
                 {
-
+                    if (textBox6.Text == "0")
+                    {
+                        textBox6.Text = "0";
+                    }
                     if (correctInput)
                     {
                         textBox6.Text = LongNumbers.Sqrt(textBox6.Text); // вывод значения на экран
+                        textBox6.Text = "±" + textBox6.Text;
+                        button18.Enabled = false;
+                        button15.Enabled = false;
                     }
                     else
                     {
@@ -304,12 +327,11 @@ namespace Square
                         MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning); // вывод ошибки ввода на экран
                     }
                 }
+                button13.Enabled = true; // включает запятую
 
 
-                
             }
 
-            button13.Enabled = true; // включает запятую
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e) // Реальные числа, переключатель
