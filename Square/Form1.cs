@@ -15,7 +15,7 @@ namespace Square
 
     public partial class Form1 : Form
     {
-        public void SetRussian()
+        public void SetRussian() // установка русского языка
         {
             Language.Rus = true;
             Language.Eng = false;
@@ -43,7 +43,7 @@ namespace Square
             Text = "Извлекатель";
         }
 
-        public void SetEnglish()
+        public void SetEnglish()// установка английского языка
         {
             Language.Rus = false;
             Language.Eng = true;
@@ -71,7 +71,7 @@ namespace Square
             Text = "Squarer";
         }
 
-        public void SetSpanish()
+        public void SetSpanish()// установка испанского языка
         {
             Language.Rus = false;
             Language.Eng = false;
@@ -99,7 +99,7 @@ namespace Square
             Text = "Radical";
         }
 
-        public void SetChinese()
+        public void SetChinese() // установка китайского языка
         {
             Language.Rus = false;
             Language.Eng = false;
@@ -127,7 +127,7 @@ namespace Square
             Text = "激進的";
         }
 
-        public void SetHindi()
+        public void SetHindi() // установка языка хинди
         {
             Language.Rus = false;
             Language.Eng = false;
@@ -184,12 +184,6 @@ namespace Square
             if (Language.Hin) SetHindi();
         }
 
-
-        private void button1_Click(object sender, EventArgs e) // Кнопка "О программе"
-        {
-
-        }
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) // счетчик точности
         {
             value = (double)numericUpDown1.Value;// в поле value присвоится значение из счетчика
@@ -205,7 +199,7 @@ namespace Square
         private void button14_Click(object sender, EventArgs e) // обработка нажатия на цифры
         {
             Button buttonNumber = (Button)sender;
-            if (radioButton2.Checked && textBox1.TextLength < 20)
+            if (radioButton2.Checked && textBox1.TextLength < 20) // ограничение длины текста в реальных числах
             {
                 if (textBox1.Text == "0")
                     textBox1.Text = buttonNumber.Text;
@@ -228,7 +222,7 @@ namespace Square
                     textBox3.Text = textBox3.Text + buttonNumber.Text;
             }
 
-            if (radioButton5.Checked && textBox6.Text.Length < 500)
+            if (radioButton5.Checked && textBox6.Text.Length < 1500) // ограничение длины текста в длинных числах
             {
                 if (textBox6.Text == "0")
                     textBox6.Text = buttonNumber.Text;
@@ -240,7 +234,7 @@ namespace Square
         private void button18_Click(object sender, EventArgs e) // нажатие на результат (сохранение введенного числа)
         {
 
-            if (isreal)
+            if (isreal) // результат корня из реальных чисел
             {
                 if (sqrt.positive)
                 {
@@ -259,7 +253,7 @@ namespace Square
                 }
             }
 
-            if (iscomplex)
+            if (iscomplex) // результат корня из комплексных чисел
             {
                 complex.real = double.Parse(textBox2.Text);
                 complex.imaginary = double.Parse(textBox3.Text);
@@ -268,35 +262,35 @@ namespace Square
                 textBox5.Text = complex.sqrtTrig2;
 
             }
-            if (islong) 
+            if (islong) // результат корня из длинных чисел
             {
                 // проверка введенных значений
                 correctInput = true;
                 for (int i = 0; i < textBox6.Text.Length; i++)
                 {
-                    if (i == 0 && !(Char.IsDigit(textBox6.Text[i])) && textBox6.Text[i] != '-')
+                    if (i == 0 && !(Char.IsDigit(textBox6.Text[i])) && textBox6.Text[i] != '-') // проверка первого символа числа (цифра/минус)
                         correctInput = false;
 
-                    if (i > 0 && (!Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-'))
+                    if (i > 0 && (!Char.IsDigit(textBox6.Text[i]) || textBox6.Text[i] == '-')) // проверка остальных символов (цифры)
                         correctInput = false;
 
-                    if (textBox6.Text.Length >= 1500)
+                    if (textBox6.Text.Length >= 1500) // ограничение ввода после преодоления максимума длины
                         correctInput = false;
                 }
 
-                if (LongNumbers.positive)
+                if (LongNumbers.positive) // корень из положительных длинных чисел
                 {
 
                     if (correctInput)
                     {
-                        textBox6.Text = LongNumbers.Sqrt(textBox6.Text);
+                        textBox6.Text = LongNumbers.Sqrt(textBox6.Text); // вывод значения на экран
                     }
                     else
                     {
-                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning); // вывод ошибки ввода на экран
                     }
                 }
-                else
+                else // корень из отрицательных длинных чисел
                 {
                     if (correctInput)
                     {
@@ -307,7 +301,7 @@ namespace Square
                     }
                     else
                     {
-                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(incorrectInput, incorrectCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning); // вывод ошибки ввода на экран
                     }
                 }
 
@@ -393,7 +387,7 @@ namespace Square
 
         private void button19_Click(object sender, EventArgs e) // кнопка C (стирание написанного) 
         {
-
+            // очистка всех полей
             textBox1.Text = "0";
             textBox2.Text = "0";
             textBox3.Text = "0";
@@ -401,8 +395,9 @@ namespace Square
             textBox5.Text = "0";
             textBox6.Text = "0";
 
-            button13.Enabled = true; // включает запятую
-            button18.Enabled = true;
+            // включение кнопок после очистки
+            button13.Enabled = true;
+            button18.Enabled = true; 
             button15.Enabled = true;
 
 
@@ -411,7 +406,7 @@ namespace Square
         private void button13_Click(object sender, EventArgs e) // Ввод запятой
         {
             Button buttonComma = (Button)sender;
-            if (radioButton2.Checked)
+            if (radioButton2.Checked) // ввод запятой для реальных чисел
             {
                 if (textBox1.Text.Count(x => x == ',') == 0)
                 {
@@ -419,14 +414,14 @@ namespace Square
                     button13.Enabled = false;
                 }
             }
-            else
+            else // ввод запятой для комплексных чисел
             {
-                if (textBox2Clicked)
+                if (textBox2Clicked) // ввод запятой в реальную часть
                 {
                     textBox2.Text = textBox2.Text + buttonComma.Text;
                     button13.Enabled = false;
                 }
-                else
+                else // ввод запятой в мнимую часть
                 {
                     textBox3.Text = textBox3.Text + buttonComma.Text;
                     button13.Enabled = false;
@@ -460,12 +455,12 @@ namespace Square
             {
                 if (textBox1.Text != "0")
                 {
-                    if (sqrt.positive)
+                    if (sqrt.positive) // добавляет минус у положительных чисел
                     {
                         textBox1.Text = "-" + textBox1.Text;
                         sqrt.positive = false;
                     }
-                    else
+                    else // убирает минус у отрицательных чисел
                     {
                         textBox1.Text = textBox1.Text.Replace("-", "");
                         sqrt.positive = true;
@@ -499,11 +494,11 @@ namespace Square
                 }
             }
 
-            if (radioButton5.Checked) 
+            if (radioButton5.Checked) // длинные числа
             {
                 if (textBox6.Text != "0")
                 {
-                    if (LongNumbers.positive)
+                    if (LongNumbers.positive) // смена знака для положительных
                     {
                         textBox6.Text = "-" + textBox6.Text;
                         LongNumbers.positive = false;
@@ -573,7 +568,7 @@ namespace Square
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) // кнопка "О программе"
         {
             Guide nextForm = new Guide();
             Form1.ActiveForm.Visible = false;
